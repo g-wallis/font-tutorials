@@ -1,0 +1,288 @@
+I"D<center><img src="/assets/images/ligature1/1-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="35%" height="35%" /></center>
+
+<h1 id="how-to-create-ligature-tables-using-fontforge-via-font-info">HOW TO CREATE LIGATURE TABLES USING FONTFORGE VIA FONT INFO</h1>
+
+<p><strong>This tutorial will show you how to create ligature substitution tables in Fontforge, via ‘Font Info’.</strong></p>
+
+<center><img src="/assets/images/ligature1/2-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="25%" height="25%" /></center>
+
+<h2 class="no_toc" id="how-this-tutorial-is-organized">How this Tutorial Is Organized</h2>
+
+<ol>
+  <li>We’ll start with a brief outline of definitions.</li>
+  <li>Followed by adding a new encoding slot so that we can create and build the ‘fi’ ligature.</li>
+  <li>Then we’ll add a single substitution lookup table, using ‘Font Info’.</li>
+  <li>Next we’ll type ‘fi’ in ‘Metrics View’ to check whether our ligature table works.</li>
+  <li>To finish off, I’ll provide tips in case your ligature lookup table may not be working.</li>
+</ol>
+
+<blockquote>
+  <p>i. You can download Fontforge for Windows, Mac, or Linux from <a href="https://fontforge.org/en-US/downloads/">here</a>.<br />
+ ii. The font used in this tutorial is called <a href="https://fonts.google.com/specimen/Playball">Playball</a>. It’s a free font for personal and commercial use with an open source license.<br />
+ iii. This tutorial is shown on a Windows 10 computer with Fontforge version 03142020.<br />
+ iv. Fontforge does crash, so save often.<br />
+ v. Detailed information on lookup tables can be found at <a href="https://fontforge.org/docs/ui/dialogs/lookups.html">Fontforge</a>.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="definitions">Definitions</h2>
+
+<p><strong>This is ‘Font View’</strong></p>
+
+<p><img src="/assets/images/ligature1/3-how-to-create-ligature-tables-fontforge-font-view.png" alt="font-view-for-ligature-tables-in-fontforge" width="70%" height="70%" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Meaning</th>
+      <th>Also Known As</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Single Substitution Lookup Table</td>
+      <td>It’s a table you create when you want to replace a single glyph with another single glyph.</td>
+      <td>Lookup, Lookup table, Substitution Lookup, Single Substitution Lookup</td>
+    </tr>
+    <tr>
+      <td>Subtable</td>
+      <td>Every lookup table has one or more subtables that defines what glyph will replace another glyph.</td>
+      <td>Lookup subtable, Substitution subtable, Single substitution lookup subtable</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="adding-a-new-encoding-slot">Adding A New Encoding Slot</h2>
+
+<ol>
+  <li>
+    <p>For this tutorial we’ll be adding a new encoding slot for the ‘fi’ ligature, however you can also,<br />
+a) use one of the Private Use Area (PUA) Unicode slots which start at E000,<br />
+b) use one of the Unicode slots for ligatures at FB00, or<br />
+c) use an existing Unicode slot.</p>
+  </li>
+  <li>
+    <p>To add a new encoding slot, make sure you’re in ‘Font View’ then,<br />
+a) Click on ‘Encoding&gt;Add Encoding Slots’.</p>
+
+    <p><img src="/assets/images/ligature1/4-how-to-create-ligature-tables-fontforge.png" alt="add-an-encoding-slot-for-ligature-substitution-lookup-table-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>On the next screen that pops ups,<br />
+a) Insert the number of encoding slots to add.<br />
+b) Then click ‘OK’.<br />
+ <img src="/assets/images/ligature1/5-how-to-create-ligature-substitution-tables-fontforge.png" alt="add-an-encoding-slot-for-ligature-substitution-lookup-table-fontforge" width="40%" height="40%" /></p>
+  </li>
+  <li>
+    <p>The new encoding slot will be added to the end and right at the bottom of ‘Font View’.</p>
+  </li>
+</ol>
+
+<h3 id="naming-your-new-encoding-slot">Naming Your New Encoding Slot</h3>
+
+<ol>
+  <li>
+    <p>Now we need to name our new encoding slot.</p>
+  </li>
+  <li>
+    <p>Click on the new encoding slot glyph cell,<br />
+a) then right click<br />
+b) Select ‘Glyph Info’<br />
+<img src="/assets/images/ligature1/6-how-to-create-ligature-substitution-tables-fontforge.png" alt="menu-in-to-select-glyph-info-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>On the next screen, make sure ‘Unicode’ is selected in the left hand column then,<br />
+a) In the box next to ‘Glyph Name’, manually type in the name of your glyph.<br />
+In this example we’ll be typing: <code class="highlighter-rouge">f_i</code><br />
+<img src="/assets/images/ligature1/7-how-to-create-ligature-substitution-tables-fontforge.png" alt="glyph-info-dialogue-box-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p class="blockquote"><strong>Note</strong> it is standard practice for ligatures to have an underscore ( _ ) separating glyphs, although Fontforge seems to recognize either; an underscore (f_i) or, no underscore (fi) for the output fi.<br />
+a) For this tutorial, we’ll be using an underscore ( _ ).</p>
+  </li>
+  <li>
+    <p>Once you’ve named your new encoding slot,<br />
+a) Click ‘OK’, to take you back to ‘Font View’.<br />
+<img src="/assets/images/ligature1/8-how-to-create-ligature-substitution-lookup-tables.png" alt="glyph-info-dialogue-box-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<p>For a detailed explanation on completing all the fields in the Glyph Info dialogue box, visit Fontforge’s <a href="https://fontforge.org/docs/ui/dialogs/charinfo.html">userguide</a>.</p>
+
+<h3 id="building-your-composite-glyph">Building Your Composite Glyph</h3>
+
+<p>Now that we’ve named our new encoding slot, we need to build a composite glyph that will go into the new encoding slot.</p>
+
+<ol>
+  <li>
+    <p>Make sure the new encoding slot you created, is selected, then<br />
+a) Click ‘Element&gt;Build&gt;Build Composite Glyph’.<br />
+<img src="/assets/images/ligature1/9-how-to-create-ligature-substitution-lookup-tables.png" alt="build-composite-glyph-for-ligature-substitution-lookup-table-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p class="blockquote"><strong>Note</strong> if you find that your ‘Element&gt;Build’ is grayed out, it means that Fontforge is not yet able to recognize what glyphs it should use to build your composite glyph.<br />
+a) In other words, you need to add a ligature substitution lookup table first, then come back and you’ll be able to access ‘Element&gt;Build’ to complete this step.<br />
+<img src="/assets/images/ligature1/10-how-to-create-ligature-substitution-lookup-tables.png" alt="grayed-out-build-composite-glyph-for-ligature-substitution-lookup-table-fontforge" width="80%" height="80%" /></p>
+  </li>
+  <li>
+    <p>After clicking ‘Element&gt;Build&gt;Build Composite Glyph’ your glyph cell should now be filled with two (2) glyphs, ready for editing.<br />
+<img src="/assets/images/ligature1/11-how-to-create-ligature-substitution-lookup-tables.png" alt="populated-cell-for-ligature-substitution-lookup-table-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Before we edit the glyphs in this cell, we need to ‘unlink’ them from their source, otherwise any changes we make to the glyphs within the new encoding slot, will change the source glyphs.</p>
+
+    <p class="blockquote">a) <strong>Note:</strong> Linked glyphs or references will display a character above the glyph in ‘character view’. You can get to ‘character view’ by double clicking a glyph cell from ‘Font View’.<br />
+<img src="/assets/images/ligature1/12-how-to-unlink-references-fontforge.png" alt="unlink-references-fontforge" width="40%" height="40%" /></p>
+  </li>
+  <li>
+    <p>To unlink them, make sure your new encoding slot is still selected, then;<br />
+a) Click ‘Edit&gt;Unlink Reference’.<br />
+<img src="/assets/images/ligature1/13-how-to-unlink-references-fontforge.png" alt="menu-to-unlink-references-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Your new encoding slot glyphs are now independent to your base glyphs and ready for editing, removing overlaps and adjusting the caret.<br />
+<img src="/assets/images/ligature1/14-how-to-unlink-references-fontforge.png" alt="before-and-after-fi-ligature-substitution-lookup-table-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Once you’ve finished editing, removing overlaps and adjusting the caret, we can move on to adding the ligature substitution lookup table.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="adding-a-ligature-substitution-lookup-table">Adding A Ligature Substitution Lookup Table</h2>
+
+<p>Next we need to create a Ligature Substitution Lookup Table to describe our changes.</p>
+
+<ol>
+  <li>
+    <p>Make sure you’re in ‘Font View’ then,<br />
+a) Click on ‘Element&gt;Font Info’.<br />
+<img src="/assets/images/ligature1/15-how-to-add-ligature-lookup-table-fontforge.png" alt="font-info-menu-for-ligature-table-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>On the next screen that pops up, make sure you’ve selected ‘Lookups’ in the left hand column, then<br />
+a) click on ‘Add Lookup’.<br />
+<img src="/assets/images/ligature1/16-how-to-add-ligature-lookup-table-fontforge.png" alt="add-lookup-dialogue-box-for-font-lookup-table" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>When the ‘Lookup’ dialogue box pops up,<br />
+a)  Select ‘Ligature Substitution’ from the drop down list at the top, next to the word ‘Type:’.<br />
+<img src="/assets/images/ligature1/17-how-to-add-ligature-lookup-table-fontforge.png" alt="drop-down-menu-in-lookup-dialogue-box-for-adding-a-single-substitution-lookup-table" width="50%" height="50%" /><br />
+b)  Now click on the little button next to &lt;New&gt; to add a new line, which should also trigger a drop down list.<br />
+<img src="/assets/images/ligature1/18-how-to-add-ligature-substitution-lookup-table.png" alt="creating-a-new-line-in-lookup-dialogue-box-for-adding-a-single-substitution-lookup-table" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>If you clicked on ‘&lt;New&gt;’ instead of the little button, you can either;<br />
+a)  Delete the line and start again, or<br />
+b)  you need to first click into the right hand column (1) blue area, then click into the left hand blue area (2), then<br />
+<img src="/assets/images/ligature1/19-how-to-add-ligature-substitution-lookup-table-fontforge.png" alt="when-no-pop-up-appears-complete--the-following-steps-in-fontforge-lookup-dialogue-box" width="50%" height="50%" /><br />
+c)  click on the little down button (3) in the left hand blue area to access the drop down list. <br />
+<img src="/assets/images/ligature1/20-how-to-add-ligature-substitution-lookup-table-fontforge.png" alt="when-no-pop-up-appears-complete--the-following-steps-in-fontforge-lookup-dialogue-box" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>When you do see the long drop down list,<br />
+a)  Select ‘liga Standard Ligatures’.<br />
+<img src="/assets/images/ligature1/21-how-to-add-ligature-substitution-lookup-subtable-fontforge.png" alt="select-standard-ligatures-in-fontforge-lookup-dialogue-box" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>The ‘Lookup Name’ will now be auto populated and a ‘liga’ will be added to the feature column.<br />
+<img src="/assets/images/ligature1/22-how-to-add-ligature-substitution-lookup-subtable.png" alt="lookup-name-in-fontforge-lookup-dialogue-box" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>In the box next to ‘Lookup Name’, you can either keep the default name or change it.<br />
+a)  In this example I’m going to change it to ‘liga’.<br />
+<img src="/assets/images/ligature1/23-how-to-add-ligature-substitution-lookup-subtable.png" alt="changing-the-lookup-name-in-fontforge-lookup-dialogue-box" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Now go ahead and,<br />
+a)  untick ‘Store ligature data in AFM files, and<br />
+b)  click ‘OK.’<br />
+<img src="/assets/images/ligature1/24-how-to-add-ligature-substitution-lookup-subtable.png" alt="click-ok-to-save-adding-a-single-substitution-lookup-table" width="50%" height="50%" /></p>
+  </li>
+</ol>
+
+<p>Now that we’ve added a Ligature Substitution lookup table the next step will be to add a corresponding subtable to it.</p>
+
+<h3 id="adding-a-ligature-substitution-subtable">Adding a Ligature Substitution Subtable</h3>
+
+<ol>
+  <li>To add a subtable to our Ligature table,<br />
+a)  click on ‘Add Subtable’.<br />
+<img src="/assets/images/ligature1/25-how-to-add-ligature-substitution-lookup-subtable.png" alt="adding-a-subtable-in-fontforge" width="70%" height="70%" /><br />
+b)  Click ‘OK’ to accept the default name, or you can rename it.<br />
+<img src="/assets/images/ligature1/26-how-to-add-ligature-substitution-lookup-subtable.png" alt="accepting-the-default-subtable-name-in-fontforge-lookup-dialogue-box" width="20%" height="20%" /></li>
+  <li>
+    <p>On the next dialogue box that pops up, we’ll associate our substitution glyphs with their default source glyphs by,<br />
+a) clicking on ‘&lt;New&gt;’ to create a new line.<br />
+<img src="/assets/images/ligature1/27-how-to-add-ligature-substitution-lookup-subtable.png" alt="populating-subtable-in-fontforge" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Now we’ll need to type the name of our ligature, into the left hand column.<br />
+a)  In this example I’ll enter: <code class="highlighter-rouge">f_i</code><br />
+b)  Remember to separate each glyph with an underscore (_).</p>
+
+    <p><img src="/assets/images/ligature1/28-how-to-add-ligature-substitution-lookup-subtable.png" alt="left-column-f_i-in-ligature-substitution-subtable-fontforge" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Then in the right hand column, type the name of the source glyphs.<br />
+a)  In this example I’ll enter: <code class="highlighter-rouge">f i</code><br />
+b)  If your ligature is made up of more than 1 source glyph, separate them with a ‘space’.</p>
+
+    <p>For example: mpl = m p l</p>
+
+    <p>Our example is:  fi =  f i</p>
+
+    <p>We will type: f i  making sure to separate each glyph with a space.  The line should auto populate as you type and with the below example, Fontforge has added ‘(fi)’ to the end.</p>
+
+    <p>c)  To view your entries you can hover your mouse over the source glyphs and a pop up will appear.<br />
+d)  Click ‘OK’.<br />
+<img src="/assets/images/ligature1/29-how-to-add-ligature-substitution-lookup-subtable.png" alt="right-column-f i-in-ligature-substitution-subtable-fontforge" width="50%" height="50%" /><br />
+e)  Click ‘OK’ again to commit and save our ligature substitution lookup table.<br />
+<img src="/assets/images/ligature1/30-how-to-add-ligature-substitution-lookup-subtable.png" alt="click-ok-to-save-adding-a-subtable" width="70%" height="70%" /></p>
+  </li>
+  <li>We have now completed the ligature substitution lookup table and you should be back in ‘Font View’ ready for testing our ligature table.</li>
+</ol>
+
+<hr />
+
+<h2 id="testing-your-ligature-lookup-table">Testing Your Ligature Lookup Table</h2>
+
+<ol>
+  <li>
+    <p>To test your lookup table, make sure you’re in ‘Font View’ then,<br />
+a)  Click ‘Metrics&gt;New Metrics Window’<br />
+<img src="/assets/images/ligature1/31-how-to-test-ligature-substitution-lookup-table.png" alt="testing-ligature-substitution-lookup-table-fontforge" width="70%" height="70%" /><br />
+b)  Type ‘ofid’, or letters of your own choosing, in the text box, and<br />
+c)  deselect ‘liga’ by holding down ‘Ctrl’ on your keyboard and left mouse click with your mouse pointer on the word ‘liga’.<br />
+<img src="/assets/images/ligature1/32-how-to-test-ligature-substitution-lookup-table.png" alt="metrics-view-with-example-ligature" width="70%" height="70%" /><br />
+<img src="/assets/images/ligature1/33-how-to-test-ligature-substitution-lookup-table.png" alt="metrics-view-without-example-ligature" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Congratulations on making it to the end and creating your ligature lookup table.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="its-not-working">It’s Not Working</h2>
+
+<ol>
+  <li>If you see your ligature changing within the ‘Metrics View’, congratulations, if you don’t, go back and make sure:<br />
+a)  you’ve followed the instructions step by step and haven’t skipped a step like ‘build composite glyphs’.<br />
+b)  Check spaces and your spelling,<br />
+c)  adjust the kerning of your new glyphs,<br />
+d)  check that you’ve entered the correct letters in the subtable,<br />
+e)  consider saving, closing Fontforge and restarting Fontforge.<br />
+f)  ‘Default Using Suffix’ will never work if you’ve used Fontforge’s ‘Mass Glyph Rename’ function. I’ve outlined the reasons why and what to do, to be able to use ‘Default Using Suffix’, <a href="/contextual-chain/#problems-completing-the-subtable">here</a>.</li>
+</ol>
+
+<p><strong>That brings us to the end of this tutorial.</strong></p>
+
+<p>I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.</p>
+
+:ET

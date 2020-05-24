@@ -1,0 +1,560 @@
+I"f|<center><img src="/assets/images/chain/1-how-to-create-chained-contextual-lookup-fontforge.png" alt="how-to-create-contextual-chaining-lookup-table-in-fontforge" width="45%" height="45%" /></center>
+
+<h1 id="how-to-create-contextual-chaining-lookups-in-fontforge">HOW TO CREATE CONTEXTUAL CHAINING LOOKUPS IN FONTFORGE</h1>
+
+<p><strong>This tutorial will show you how to create contextual chaining lookups in Fontforge.</strong></p>
+
+<h2 class="no_toc" id="how-this-tutorial-is-organized">How this Tutorial is Organized</h2>
+
+<ol>
+  <li>We’ll start with a brief outline of definitions.</li>
+  <li>Followed by creating a set of glyphs that we’ll use for a single substitution lookup table.</li>
+  <li>Then we’ll create a single substitution lookup and troubleshoot problems that occur when completing its subtable.</li>
+  <li>Next we’ll create a contextual chaining substitution lookup and its companion subtable.</li>
+  <li>Then, we’ll test our formula.</li>
+  <li>I’ll then provide alternate formulas so you can see how they work, and</li>
+  <li>I’ll give you some tips on why your contextual chaining substitution may not be working.</li>
+</ol>
+
+<blockquote>
+  <p>i. You can download Fontforge for Windows, Mac, or Linux from <a href="https://fontforge.org/en-US/downloads/">here</a>.<br />
+ ii. The font used in this tutorial is called <a href="https://www.fontsquirrel.com/fonts/cabin">Cabin</a>. It’s a free font for personal and commercial use with an open source license.<br />
+ iii. This tutorial is shown on a Windows 10 computer with Fontforge version 03142020.<br />
+ iv. Fontforge does crash, so save often.<br />
+ v. Detailed information on contextual chaining lookups can be found at <a href="https://fontforge.org/docs/ui/dialogs/contextchain.html?highlight=coverage%20table#">Fontforge</a>.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="definitions">Definitions</h2>
+
+<p><strong>This is ‘Font View’</strong></p>
+
+<p><img src="/assets/images/chain/2-how-to-create-contextual-chained-lookups-fontforge.png" alt="font-view-in-chained-contextual-lookup" width="70%" height="70%" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Meaning</th>
+      <th>Also Known As</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Single Substitution Lookup Table</td>
+      <td>It’s a table you create when you want to replace a single glyph with another single glyph.</td>
+      <td>Lookup, lookup table, substitution lookup, single substitution lookup</td>
+    </tr>
+    <tr>
+      <td>Subtable</td>
+      <td>Every lookup table has one or more subtables that defines what glyph will replace another glyph.</td>
+      <td>Lookup subtable, substitution subtable, single substitution lookup subtable</td>
+    </tr>
+    <tr>
+      <td>Contextual Chained Lookup Table</td>
+      <td>It’s a sequence that has three parts: backtrack, current glyph, and lookahead glyph. It can also be two parts.</td>
+      <td>Any combination of the words ‘chain, contextual, substitution, lookup’.  Chained lookup, chaining contextual lookup, chaining contextual substitution, chained substitution</td>
+    </tr>
+    <tr>
+      <td>Contextual Chained Substitution Lookup Subtable</td>
+      <td>This has the same meaning as ‘Subtable’</td>
+      <td>Same as subtable with the addition of chained or chaining</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="creating-glyphs">Creating Glyphs</h2>
+
+<ol>
+  <li>
+    <p>First create a set of glyphs to be used for the single substitution lookup table.<br />
+a) In this example I’ve created 26 glyphs and named them lowercase with the suffix ‘slant’.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  a.slant,  b.slant,  c.slant,  etc...  
+</code></pre></div>    </div>
+
+    <h2><img src="/assets/images/chain/3-how-to-create-chained-contextual-lookups-fontforge.png" alt="create-glyphs-for-chained-contextual-lookup" width="70%" height="70%" /></h2>
+  </li>
+</ol>
+
+<h2 id="single-substitution-lookup-table">Single Substitution Lookup Table</h2>
+
+<p>Now we’ll create our single substitution lookup table to describe our changes.</p>
+
+<ol>
+  <li>
+    <p>To create a new lookup table, make sure you’re in ‘Font View’ then<br />
+a) click on ‘Element&gt;Font Info’<br />
+ <img src="/assets/images/chain/4-how-to-create-chained-lookups-fontforge.png" alt="add-single-substitution-lookup-table-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>On the next screen that pops up, make sure you’ve selected ‘Lookups’ in the left hand column, then<br />
+a) Select ‘Add Lookup’<br />
+<img src="/assets/images/chain/5-how-to-create-chaining-contextual-lookups-fontforge.png" alt="add-single-substitution-lookup-table-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>When the ‘Lookup’ dialogue box pops up,<br />
+a) Select ‘Single Substitution’ from the drop down list at the top, next to the word ‘Type:’.<br />
+b) Now click on the little button next to &lt;New&gt; to add a new line, which should also trigger a drop down list.<br />
+c) Make your selection. In this example I’ve selected ‘ital’ because the glyphs I created are italics.<br />
+d) The ‘Lookup Name’ will now be auto populated and you can either keep the default name or change it.<br />
+In this example I’ve changed name to ‘ital’.<br />
+e) Click ‘OK.’<br />
+<img src="/assets/images/chain/6-how-to-create-contextual-chaining-lookups-fontforge.png" alt="complete-substitution-lookup-dialogue-box" width="50%" height="50%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="single-substitution-subtable">Single Substitution Subtable</h2>
+
+<ol>
+  <li>
+    <p>We will now add a subtable to our lookup by,<br />
+a)  selecting ‘ital’,<br />
+b)  then click on ‘Add Subtable’.<br />
+<img src="/assets/images/chain/7-how-to-create-chained-contextual-lookups-fontforge.png" alt="adding-a-subtable-for-chained-contextual-lookup" width="70%" height="70%" /></p>
+
+    <p>c) Click ‘OK’ to accept the default name, or you can rename it.<br />
+<img src="/assets/images/chain/8-how-to-create-contextual-chained-lookups-fontforge.png" alt="naming-subtable-for-chained-contextual-lookup-in-fontforge" width="25%" height="25%" /></p>
+  </li>
+  <li>
+    <p>The next dialogue box that pops up will be our subtable called ‘Lookup Subtable, ital’ where we’ll associate our substitution glyphs with their default glyphs.<br />
+a) Type ‘slant’ in the box next to ‘Default Using Suffix’.</p>
+
+    <ul class="blockblue">
+      <li>
+        <p>The ‘Default Using Suffix’ is associated with the name you gave your created glyphs.<br />
+For example, I called my new glyphs ‘a.slant, b.slant, c.slant, etc’ and their suffix is ‘slant’.</p>
+      </li>
+      <li>
+        <p>If I created ‘g.name, s.name, y.name’ their suffix would be ‘name’ and I would type ‘name’ in the box next to ‘Default Using Suffix’.</p>
+      </li>
+    </ul>
+
+    <p>b) Now click the button called ‘Default Using Suffix’ to automatically fill the list.</p>
+
+    <p><img src="/assets/images/chain/9-how-to-create-contextual-chained-lookup-table-fontforge.png" alt="completing-subtable-for-chained-contextual-lookup-in-fontforge" width="50%" height="50%" /></p>
+
+    <p>c) Click ‘OK’ to take you back to the ‘Font Info’ dialogue box.</p>
+
+    <p><img src="/assets/images/chain/10-create-contextual-chained-lookup-subtable-fontforge.png" alt="using-default-using-suffix-to-complete-substitution-lookup-dialogue-box" width="50%" height="50%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="problems-completing-the-subtable">Problems Completing the Subtable</h2>
+
+<ol>
+  <li>
+    <p>If the list doesn’t auto fill,<br />
+a) check the glyph names,<br />
+b) check spelling,<br />
+c) make sure you’re referring to the right names (g.sc and G.sc are not the same), are you thinking about the uppercase glyph and have named it with a lowercase letter.<br />
+d) Try to manually type in the list, and as a last resort save, quit and restart Fontforge and start again.</p>
+  </li>
+  <li>
+    <p><strong>Be aware</strong> if you use Fontforge’s ‘<em>Element&gt;Other Info&gt;Mass Glyph Rename</em>’ function, the ‘<em>Default Using Suffix</em>’ will not recognize the names, and manually entering the glyphs in the subtable will throw an error. <br />
+a) The only way for ‘<em>Default Using Suffix</em>’ to work is to manually type the glyph names in ‘Glyph Info’, even though ‘Mass Glyph Rename’ has correctly named them.</p>
+
+    <p>b) This is the ‘Glyph Info’ dialogue box that can be accessed by selecting a glyph in ‘Font View’, then right mouse click and select ‘Glyph Info’.<br />
+<img src="/assets/images/chain/11-create-contextual-chained-lookup-glyph-info-fontforge.png" alt="glyph-info-dialogue-box-to-name-glyphs" width="70%" height="70%" /></p>
+
+    <p>c) You also can’t try ‘Mass Glyph Rename’ then delete the name in ‘Glyph Info’ and manually type the name.</p>
+
+    <p>d) The only way forward after you’ve tried ‘Mass Glyph Rename’ is to close Fontforge and start again.</p>
+  </li>
+  <li>
+    <p><strong>Be aware</strong> if you get the error pop up asking ‘whether the glyphs you typed were intentional’, you need to save, quit, re start Fontforge and start again for the ‘<em>Default Using Suffix</em>’ button to work.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="contextual-chaining-substitution-lookup">Contextual Chaining Substitution Lookup</h2>
+
+<ol>
+  <li>
+    <p>Next, we need to create another lookup table just as we did above, only now using ‘chaining contextual substitution’.</p>
+  </li>
+  <li>
+    <p>You should still be on the ‘Font Info’ dialogue box, however if you’re not, you can navigate back to it from ‘Font View’ then<br />
+a) click on ‘Element&gt;Font Info&gt;Lookups</p>
+  </li>
+  <li>
+    <p>Next you’ll need to,<br />
+a) click on ‘Add Lookup’.<br />
+<img src="/assets/images/chain/12-how-to-create-contextual-chained-lookup-table-fontforge.png" alt="adding-calt-contextual-chained-lookup" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>In the next dialogue box that pops up,<br />
+a)  select ‘Contextual Chaining Substitution’ from the drop down box at the top next to the word ‘Type:’.<br />
+b) Then click on ‘&lt;New&gt;’ to enable another drop down box.<br />
+c) Then select ‘calt Contextual Alternatives’.<br />
+<img src="/assets/images/chain/13-how-to-create-contextual-chaining-lookup-table-fontforge.png" alt="settings-for-chained-contextual-lookup-dialogue-box-in-fontforge" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>The ‘Lookup Name’ will now be auto populated and a ‘calt’ will be added in the feature column.</p>
+  </li>
+  <li>
+    <p>In the box next to ‘Lookup Name’, you can either keep the default name or change it.</p>
+  </li>
+  <li>
+    <p>Click ‘OK’ to save the changes.<br />
+<img src="/assets/images/chain/14-add-contextual-chaining-table-fontforge.png" alt="selecting-calt-contextual-alternatives-for-chained-contextual-lookup" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Now that we’ve added a contextual chaining lookup table the next step will be to add a corresponding subtable to it, just like we did in the previous step.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="contextual-subtable">Contextual Subtable</h2>
+
+<ol>
+  <li>
+    <p>Next we’ll add a subtable to our contextual chaining lookup table.<br />
+a) Click ‘Add Subtable’</p>
+
+    <p><img src="/assets/images/chain/15-how-to-create-contextual-chained-lookup-subtable-fontforge.png" alt="adding-a-subtable-for-chained-contextual-lookup" width="70%" height="70%" /></p>
+
+    <p>b) Click ‘OK’ to accept the default name, or rename it.</p>
+
+    <p><img src="/assets/images/chain/16-add contextual-chaining-subtable-fontforge.png" alt="naming-subtable-for-chained-contextual-lookup-in-fontforge" width="30%" height="30%" /></p>
+
+    <p>c) Select ‘By classes’, and ‘Simple’,<br />
+d) Click ‘&lt;Next&gt;’</p>
+
+    <p><img src="/assets/images/chain/17-how-to-complete-contextual-chained-lookup-subtable-fontforge.png" alt="selecting-settings-for-chained-contextual-lookup-dialogue-box-in-fontforge" width="50%" height="50%" /></p>
+
+    <h3 id="step-sequence">Step Sequence</h3>
+  </li>
+  <li>
+    <p>To be able to complete the next section you need to complete the following steps in this order only, otherwise the functions of ‘Back’ and ‘Ahead’ are inaccessible.</p>
+  </li>
+  <li>
+    <p>First, click on ‘Back Classes’ and remove the tick from ‘Same as Match Classes’.<br />
+<img src="/assets/images/chain/18-how-to-complete-contextual-chained-lookup-subtable-fontforge.png" alt="access-sequence-1-for-chained-contextual-subtable-lookup-in-fontforge" width="45%" height="45%" />  <img src="/assets/images/chain/19-how-to-complete-contextual-chained-lookup-subtable-fontforge.png" alt="access-sequence-2-for-chained-contextual-subtable-lookup-in-fontforge" width="45%" height="45%" /></p>
+  </li>
+  <li>
+    <p>Then, click on ‘Ahead Classes’ and remove the tick from ‘Same as Match Classes’<br />
+<img src="/assets/images/chain/20-how-to-complete-contextual-chaining-lookup-subtable-fontforge.png" alt="access-sequence-3-for-chained-contextual-subtable-lookup-in-fontforge" width="45%" height="45%" />  <img src="/assets/images/chain/19-how-to-complete-contextual-chained-lookup-subtable-fontforge.png" alt="access-sequence-4-for-chained-contextual-subtable-lookup-in-fontforge" width="45%" height="45%" /></p>
+
+    <h4 id="bottom-section">Bottom Section</h4>
+  </li>
+  <li>
+    <p>Now, click on ‘Match Classes’ and populate the table with any random data, starting with the bottom section first. The random data will act as dummy place holders. For example,<br />
+a) Click on ‘&lt;New&gt;’<br />
+b) Type ‘<code class="highlighter-rouge"> 1 </code>’ into the ‘Name’ column,<br />
+c) type ‘<code class="highlighter-rouge"> e </code>’ into the ‘Glyphs in the class’ column.<br />
+<img src="/assets/images/chain/21-how-to-complete-chained-contextual-lookup-subtable-fontforge.png" alt="dummy-information-access-sequence-5-for-chained-contextual-subtable-lookup-in-fontforge" width="50%" height="50%" /></p>
+
+    <h4 id="top-section">Top Section</h4>
+  </li>
+  <li>
+    <p>Now we’ll complete the top section,<br />
+a) Click on ‘&lt;New&gt;’ in the top section<br />
+b) Type ‘<code class="highlighter-rouge"> 1 </code>’ on the newly created line<br />
+c) Click on ‘Add Lookup’<br />
+d) Select one of the Lookup tables, for example ‘ital’<br />
+<img src="/assets/images/chain/22-how-to-complete-chained-contextual-lookup-subtable-fontforge.png" alt="dummy-formula-access-sequence-6-for-chained-contextual-subtable-lookup-in-fontforge" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Your formula should now look like this:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 @&lt;ital&gt;  
+</code></pre></div>    </div>
+
+    <p>a) Click ‘OK’ which will take you back to the ‘Font Info’ dialogue box.</p>
+
+    <p><img src="/assets/images/chain/23-how-to-complete-chained-contextual-lookup-subtable-fontforge.png" alt="click-okay-to-return-to-glyphs-for-chained-contextual-lookup" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>This is the end of the step sequence. We’ll now check we can access the ‘Back’ and ‘Ahead’ classes.</p>
+
+    <h3 id="accessibility">Accessibility</h3>
+  </li>
+  <li>
+    <p>Go ahead and expand the ‘calt’ Lookup line and select the ‘’calt’ Contextual Alternates in Latin lookup 3-1’ subtable.<br />
+a) Then click on ‘Edit Data’<br />
+<img src="/assets/images/chain/24-how-to-complete-chained-subtable-fontforge.png" alt="" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Click on ‘Back Classes’ and ‘Ahead Classes’ to confirm the bottom section is now accessible.<br />
+a) If it isn’t, delete the entire Contextual Lookup and start again, making sure to follow the <a href="/contextual-chain/#step-sequence">steps</a> in the above order only.<br />
+<img src="/assets/images/chain/25-how-to-complete-chained-subtable-fontforge.png" alt="confirm-accessibility-of-back-and-ahead-classes-in-subtable" width="45%" height="45%" />  <img src="/assets/images/chain/26-how-to-complete-chained-subtable-fontforge.png" alt="confirm-accessibility-of-back-and-ahead-classes-in-subtable" width="45%" height="45%" /></p>
+
+    <h3 id="deleting-place-holders">Deleting Place Holders</h3>
+  </li>
+  <li>
+    <p>Continue with the following steps after confirming you can access the bottom section.</p>
+  </li>
+  <li>
+    <p>Go ahead and delete the dummy place holders you created in the previous step.<br />
+<img src="/assets/images/chain/27-how-to-complete-chained-subtable-fontforge.png" alt="delete-dummy-place-holders-in-subtable" width="50%" height="50%" /></p>
+
+    <h3 id="chaining-formula">Chaining Formula</h3>
+  </li>
+  <li>
+    <p>Now we’ll enter our contextual chaining formula. <strong>Remember</strong> the bottom section needs to be completed before the top section.</p>
+
+    <h4 id="match-classes">Match Classes</h4>
+  </li>
+  <li>
+    <p>We’ll complete the ‘Match Classes’ first.<br />
+a) Click on ‘Match Classes’<br />
+b) Click on ‘&lt;New&gt;’<br />
+c) Type the word ‘<code class="highlighter-rouge"> letters </code>’, or a word of your choosing, in the column on the left.<br />
+d) And in the column on the right, either manually type ‘<code class="highlighter-rouge"> d s y </code>’, separated by a space, or use the drop down arrow to select the glyphs that represent the class that you want substituted.</p>
+
+    <p class="blockquote">i. The glyphs should auto populate as you type.</p>
+
+    <p><img src="/assets/images/chain/28-how-to-complete-opentype-chained-lookup-fontforge.png" alt="add-bottom-match-classes-formula-to-subtable-fontforge" width="50%" height="50%" /></p>
+
+    <h4 id="back-classes">Back Classes</h4>
+  </li>
+  <li>
+    <p>Now we’ll complete the ‘Back Classes’ section.<br />
+a) Click on ‘Back Classes’<br />
+b) Click on ‘&lt;New&gt;’ in the bottom section<br />
+c) Type ‘<code class="highlighter-rouge"> back </code>’, or a word of your choosing, in the column on the left.<br />
+d) Type ‘<code class="highlighter-rouge"> e </code>’ in the column on the right.<br />
+<img src="/assets/images/chain/29-how-to-complete-opentype-chained-lookup-fontforge.png" alt="add-bottom-back-classes-formula-to-subtable-fontforge" width="50%" height="50%" /></p>
+
+    <h4 id="ahead-classes">Ahead Classes</h4>
+  </li>
+  <li>
+    <p>Next we need to complete the ‘Ahead Classes’ section.<br />
+a) Click on ‘Ahead Classes’<br />
+b) Click on ‘&lt;New&gt;’ in the bottom section<br />
+c) Type the word ‘<code class="highlighter-rouge"> ahead </code>’, or a word of your choosing, in the column on the left.<br />
+d) In the column on the right, type in the alphabet, separated by spaces, or click on the small arrow and select the letters, then click ‘OK’.<br />
+<img src="/assets/images/chain/30-how-to-complete-opentype-chained-lookup-fontforge.png" alt="add-bottom-ahead-classes-formula-to-subtable-fontforge" width="48%" height="48%" />  <img src="/assets/images/chain/31-how-to-add-opentype-contextual-chained-lookup-fontforge.png" alt="add-bottom-ahead-classes-formula-to-subtable-fontforge" width="45%" height="45%" /></p>
+
+    <h4 id="top-section-1">Top Section</h4>
+  </li>
+  <li>
+    <p>We will now complete the top section formula.<br />
+a) Click on ‘&lt;New&gt;’ in the top section<br />
+b) Type ‘<code class="highlighter-rouge"> back </code>’ to define the glyphs that should appear before the glyph to change.<br />
+c) Click on ‘New Section’. What this does is, it separates ‘Back Classes’ from ‘Match Classes’ in the equation.<br />
+<img src="/assets/images/chain/32-how-to-add-opentype-contextual-chained-lookup-fontforge.png" alt="complete-top-section-formula-to-subtable-fontforge" width="50%" height="50%" /></p>
+
+    <p>d) Type ‘<code class="highlighter-rouge"> letters </code>’ to define the glyphs that will be changed.<br />
+e) Click on ‘Add Lookup’ and select a lookup. I selected ‘ital’<br />
+<img src="/assets/images/chain/33-how-to-add-opentype-contextual-chained-lookup-fontforge.png" alt="insert-formula-to-chained-contextual-lookup-subtable-fontforge" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Your formula line should look like this:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>back | letters @&lt;ital&gt;
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/chain/34-how-to-add-opentype-contextual-chaining-lookup-fontforge.png" alt="example-formula-to-chained-contextual-lookup-subtable-fontforge" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>If you de-select the formula line, the only way to continue with the process is to manually enter the information in the popup dialogue box.<br />
+a) Therefore, try not to ‘de-select’ and turn the formula line from blue to clear. <br />
+b) If this happens to you, type: ‘<code class="highlighter-rouge"> | ahead </code>’<br />
+c) Click ‘OK’.</p>
+  </li>
+  <li>
+    <p>The entire formula should look like this:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>back | letters @&lt;ital&gt; | ahead  
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/chain/35-how-to-add-opentype-contextual-chained-table-fontforge.png" alt="example-formula-to-chained-contextual-lookup-subtable-fontforge" width="70%" height="70%" />  <img src="/assets/images/chain/36-how-to-add-opentype-contextual-chained-lookup-subtable-fontforge.png" alt="how-to-complete-chaining-contextual-subtable" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>If your curser is still in the blue formula section,<br />
+a) click on ‘New Section’ to separate ‘Match Classes’ from ‘Ahead Classes’ in the equation.<br />
+b) Type ‘<code class="highlighter-rouge"> ahead </code>’.<br />
+c) The entire formula should look like this:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>back | letters @&lt;ital&gt; | ahead  
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>The formula means:<br />
+Where a glyph appears from ‘letters’, replace it with a glyph from ‘italics’, only if the next glyph is from ‘ahead’, and the preceding glyph is from ‘back’</p>
+  </li>
+  <li>
+    <p>To finish up,<br />
+a) click ‘OK’,<br />
+<img src="/assets/images/chain/37-how-to-add-opentype-contextual-chained-lookup-subtable-fontforge.png" alt="completed-chaining-contextual-formula-subtable" width="50%" height="50%" /></p>
+
+    <p>e) click ‘OK’ again to save your lookups.<br />
+<img src="/assets/images/chain/38-how-to-complete-contextual-chained-lookup-table-calt.png" alt="click-okay-to-save-your-lookup-tables" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>We have now finished completing our lookup tables and will move on to testing them.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="testing-your-formula">Testing Your Formula</h2>
+
+<ol>
+  <li>
+    <p>To test your contextual chained lookup, start from ‘Font View’<br />
+a) Click on ‘Metrics&gt;New Metrics Windows’<br />
+b) Type into the box and test whether your formula works or not.<br />
+c) De-select ‘calt’ by holding down ‘Ctrl’ on your keyboard and left mouse click on ‘calt’ to see the changes from normal text to ‘calt’ text.</p>
+
+    <p><img src="/assets/images/chain/39-how-to-complete-contextual-chained-lookup-table-calt.png" alt="testing-your-contextual-chained-lookup-in-metrics-view" width="70%" height="70%" /></p>
+
+    <p><img src="/assets/images/chain/40-how-to-complete-contextual-chained-lookup-table-calt.png" alt="testing-your-calt-contextual-chained-lookup" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="alternate-formula-examples">Alternate Formula Examples</h2>
+
+<ol>
+  <li>
+    <p>Here are some alternate formulas to consider.</p>
+
+    <h3 id="example-1">Example 1</h3>
+  </li>
+  <li>
+    <p>In this example, we’ll be using the two single substitution lookups of;</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ital  
+ smcp  
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>The information within Match Classes, Back Classes and Ahead Classes are the same as our original example.</p>
+  </li>
+  <li>
+    <p>And the contextual lookup formula will be:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>back | letters @&lt;ital&gt; letters @&lt;'smcp' Lowercase to Small Capitals in Latin lookup 1&gt; | ahead  
+</code></pre></div>    </div>
+
+    <p>a)  Remember that ‘spaces’ in the formula don’t matter.<br />
+<img src="/assets/images/chain/41-how-to-complete-contextual-chaining-lookup-table-calt.png" alt="alternate-formula-for-chained-contextual-lookup-in-fontforge" width="80%" height="80%" /></p>
+  </li>
+  <li>
+    <p>The contextual formula means:</p>
+
+    <p>Where 2 consecutive glyphs appear from ‘letters’, replace the first glyph with ‘italics’ and replace the second glyph with ‘smcp’, only if the next glyph is from ‘ahead’, and the preceding glyph is from ‘back’</p>
+  </li>
+  <li>
+    <p>Explained another way</p>
+
+    <ul>
+      <li>If the preceding glyph is from ‘back’, and</li>
+      <li>2 consecutive glyphs appear from the match class ‘letters’, replace the first glyph with ‘italics’ and replace the second glyph with ‘smcp’,</li>
+      <li>only where the next glyph is from ‘ahead’.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Testing the new formula looks like this:</p>
+
+    <p><img src="/assets/images/chain/42-how-to-complete-contextual-chained-lookup-table-calt.png" alt="testing-alternate-formula-with-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <p><img src="/assets/images/chain/43-how-to-complete-contextual-chained-lookup-table-calt.png" alt="testing-alternate-formula-without-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <h3 id="example-2">Example 2</h3>
+  </li>
+  <li>
+    <p>For the next example, I’ve gone back to each lookup table, clicked ‘Edit Metadata’ and renamed them so that the code is shorter.  <br />
+<img src="/assets/images/chain/44-how-to-complete-chained-contextual-lookup-table-calt.png" alt="shortening-lookup-names-in-fontforge" width="70%" height="70%" /><br />
+a)  I’ve also added a second row in the bottom table to now include numbers 1 to 9.</p>
+  </li>
+  <li>
+    <p>The example formula is:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> back | letters @&lt;ital&gt; number | ahead   
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/chain/45-how-to-complete-chained-contextual-lookup-table-calt.png" alt="alternate-formula-example-for-chained-contextual-lookup-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>This means:
+    <ul>
+      <li>If the preceeding glyph is from ‘back’, and</li>
+      <li>a glyph appears from ‘letters’ and is immediately followed by a number, then replace the glyph from letters with ‘ital’,</li>
+      <li>only where the next glyph is from ‘ahead’.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Testing the new formula looks like this:<br />
+<img src="/assets/images/chain/46-how-to-complete-chaining-contextual-lookup-table-calt.png" alt="testing-alternate-formula-with-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <p><img src="/assets/images/chain/47-how-to-complete-chained-contextual-lookup-table-calt.png" alt="testing-alternate-formula-without-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <h3 id="example-3">Example 3</h3>
+  </li>
+  <li>
+    <p>For the next example, I’ve added a ‘kern’ lookup table and kerned ‘y.slant’ + ‘a’. <br />
+a)  This means, ‘y.slant’ followed by an ‘a’ will be kerned if they appear in a chaining contextual lookup.</p>
+  </li>
+  <li>
+    <p>The kern subtable looks like this:</p>
+
+    <p><img src="/assets/images/chain/48-how-to-complete-kerning-chained-contextual-lookup-table.png" alt="alternate-example-formula-with-kerning-contextual-chained-lookup-table-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>The example formula is our original formula:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>back | letter @&lt;ital&gt; | ahead  
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Testing the new formula looks like this:</p>
+
+    <p><img src="/assets/images/chain/49-how-to-complete-kerning-chained-contextual-lookup-table.png" alt="testing-alternate-kerning-formula-with-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <p><img src="/assets/images/chain/50-how-to-complete-kerning-chained-contextual-lookup-table.png" alt="testing-alternate-kerning-formula-without-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <h3 id="example-4">Example 4</h3>
+  </li>
+  <li>
+    <p>For the last example, I’ve only included the ‘Match Classes’ and the ‘Ahead Classes’.<br />
+a)  The formula is</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| letters @&lt;ital&gt; letters @&lt;smcp&gt; | ahead  
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/chain/51-how-to-complete-chained-contextual-substitution.png" alt="alternate-formula-example-for-chained-contextual-lookup-in-fontforge" width="50%" height="50%" /></p>
+
+    <p>b) Testing the new formula looks like this:<br />
+<img src="/assets/images/chain/52-how-to-complete-chained-contextual-substitution.png" alt="testing-alternate-formula-with-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+
+    <p><img src="/assets/images/chain/53-how-to-complete-chained-contextual-substitution.png" alt="testing-alternate-formula-without-calt-feature-in-metrics-view" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="its-not-working">It’s Not Working</h2>
+
+<ol>
+  <li>
+    <p>If it’s not working out correctly,<br />
+a) Review your ‘single substitution’ look up tables,<br />
+b) Make sure lookup tables match what you’ve typed / included in your contextual formula top and bottom containers,<br />
+c) Check spelling throughout.<br />
+d) Start with small formula so that you can identify what is and is not working.<br />
+e) If you get a warning pop up asking ‘whether the glyphs you typed were intentional’, you need to save, quit, restart Fontforge and start again for the ‘Default Using Suffix’ button to work.<br />
+f) ‘Default Using Suffix’ will never work if you’ve used Fontforge’s ‘Mass Glyph Rename’ function. I’ve outlined the reasons why and what to do, to be able to use ‘Default Using Suffix’, [here].</p>
+  </li>
+  <li>
+    <p>Days after working out the order of steps to get the chaining subtable to work, I was looking through Fontforge issues on Github and found this exact bug has been reported by <a href="https://github.com/fontforge/fontforge/issues/2795">RolfNoyer</a> on Aug 30 2016. If I have confused you, read <a href="https://github.com/fontforge/fontforge/issues/2795">RolfNoyer’s</a> explanation.</p>
+  </li>
+</ol>
+
+<p><strong>That brings us to the end of this tutorial.</strong></p>
+
+<p>Take a deep breath! You’ve now completed everything you need to run a successful contextual chaining lookup for your font.</p>
+
+:ET

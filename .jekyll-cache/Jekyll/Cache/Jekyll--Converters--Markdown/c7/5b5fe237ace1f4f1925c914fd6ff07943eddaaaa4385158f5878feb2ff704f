@@ -1,0 +1,10 @@
+I"’<ul class="toc-list">
+  <li class="toc-item"><a href="#definitions">Definitions</a></li>
+  <li class="toc-item"><a href="#adding-a-new-encoding-slot">Adding A New Encoding Slot</a></li>
+  <li class="toc-item"><a href="#naming-your-new-encoding-slot">Naming Your New Encoding Slot</a></li>
+  <li class="toc-item"><a href="#creating-the-lookup-table">Creating the Lookup Table</a></li>
+  <li class="toc-item"><a href="#building-a-composite-glyph">Building a Composite Glyph</a></li>
+  <li class="toc-item"><a href="#testing-the-lookup-table">Testing the Lookup Table</a></li>
+  <li class="toc-item"><a href="#its-not-working">Itâ€™s Not Working</a></li>
+</ul>
+:ET

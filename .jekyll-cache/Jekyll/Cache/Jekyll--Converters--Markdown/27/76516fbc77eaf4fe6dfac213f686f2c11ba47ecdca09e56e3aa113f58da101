@@ -1,0 +1,322 @@
+I"/G<center><img src="/assets/images/interface/1-change-display-settings-fontforge.png" alt="how-to-change-display-settings-using-fontforge" width="30%" height="30%" /></center>
+
+<h1 id="how-to-change-the-user-interface-settings-in-fontforge">HOW TO CHANGE THE USER INTERFACE SETTINGS IN FONTFORGE</h1>
+
+<p><strong>This tutorial will show you how to change the appearance of some of the user interface settings in Fontforge.</strong></p>
+
+<h2 class="no_toc" id="how-this-tutorial-is-organized">How this Tutorial is Organized</h2>
+
+<ol>
+  <li>We’ll start with the appearance of cells in ‘Font View’.</li>
+  <li>Then we’ll look at changing the size of ‘Font View’s’ interface.</li>
+  <li>Next, we’ll specify the settings for an active cell.</li>
+  <li>And lastly, I’ll show you how to change the display font for some dialogue boxes, so it’s easier to read.</li>
+</ol>
+
+<blockquote>
+  <p>i. You can download Fontforge for Windows, Mac, or Linux from <a href="https://fontforge.org/en-US/downloads/">here</a>.<br />
+ ii. The two fonts used in this tutorial are called <a href="(https://www.dafont.com/goodlight.font?l%5b%5d=10)">Goodlight</a> and <a href="(https://www.dafont.com/linux-libertine.font?l%5b%5d=10)">Linux Libertine</a>. They’re both free fonts for personal and commercial, use with an open source license.<br />
+ iii. This tutorial is shown on a Windows 10 computer with Fontforge version 03142020.<br />
+ iv. Fontforge does crash, so save often.<br />
+ v. Further information that describes each ‘X Resource Editor’ item can be found at <a href="(https://github.com/fontforge/fontforge/blob/61ea6a817de0c0576c0b04b4faec956a7440666d/doc/sphinx/ui/misc/xres.rst)">Fontforge’s</a> Github repository or Fontforge’s online <a href="(https://fontforge.org/docs/ui/misc/xres.html).">documentation</a>.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="definitions">Definitions</h2>
+
+<p><strong>This is ‘Font View’</strong></p>
+
+<p><img src="/assets/images/interface/2-change-display-settings-fontforge.png" alt="font-view-how-to-change-display-settings-using-fontforge" width="70%" height="70%" /></p>
+
+<hr />
+
+<h2 id="glyph-cell-appearance">Glyph Cell Appearance</h2>
+
+<ol>
+  <li>
+    <p>This section will focus on the appearance of the cells within ‘Font View’ and whether or not you want to see metrics in each glyph cell.<br />
+a) This is what ‘Font View’ looks like when all the glyph cell metrics are hidden from display.<br />
+ <img src="/assets/images/interface/3-change-display-settings-fontforge.png" alt="font-view-cell-metrics-hidden-user-interface" width="70%" height="70%" /></p>
+
+    <p>b) This is what ‘Font View’ looks like when all the glyph cell metrics are displayed.<br />
+ <img src="/assets/images/interface/2-change-display-settings-fontforge.png" alt="font-view-cell-metrics-visible-in-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>To access the settings and change what you see in each glyph cell, you need to,<br />
+a) Click on ‘View&gt;Show H. Metrics…’,<br />
+ <img src="/assets/images/interface/4-change-cell-metrics-settings-fontforge.png" alt="access-cell-metrics-settings-dialogue-box" width="70%" height="70%" /></p>
+
+    <p>b) ‘Tick’ the boxes to show metrics or<br />
+ c) ‘Untick’ the boxes to hide metrics from Font View.<br />
+ d) Click ‘OK’ to save your settings.<br />
+ <img src="/assets/images/interface/5-change-cell-metrics-settings-fontforge.png" alt="show-cell-metrics-dialogue-box" width="25%" height="25%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="font-views-interface">Font View’s Interface</h2>
+
+<p>Next we’re going to change the size of ‘Font View’s’ interface.</p>
+
+<ol>
+  <li>
+    <p>To change the interface settings,<br />
+a) click on ‘View’<br />
+b) then select your desired size from the list.</p>
+  </li>
+  <li>
+    <p>Consider also selecting ‘anti-alias’ to sharpen the display. Be aware that ‘anti-alias’ is slower to generate.<br />
+ <img src="/assets/images/interface/6-change-display-settings-fontforge.png" alt="change-font-view's-user-interface-size" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>You can also change the number of cells displayed by,<br />
+a) clicking on ‘View’<br />
+b) then select your desired cell window.<br />
+ <img src="/assets/images/interface/7-change-display-settings-fontforge.png" alt="cell-window-display-size-menu" width="70%" height="70%" /></p>
+
+    <p><strong>Included below are examples to consider:</strong></p>
+  </li>
+  <li>
+    <p>This is an example of the display option<br />
+a) ‘8x2 cell window’,<br />
+b) with a ’96 pixel outline’,<br />
+c) anti-aliased enabled.<br />
+<img src="/assets/images/interface/8-change-user-interface-fontforge.png" alt="example-8x2-cell-window-in-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>This is an example of the display option<br />
+a) ‘16x4 cell window’,<br />
+b) with a ’24 pixel outline’,<br />
+c) anti-aliased disabled.<br />
+<img src="/assets/images/interface/9-change-display-settings-fontforge.png" alt="example-16x4-cell-window-in-fontforge-user-interface" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>This is an example of the display option<br />
+a) ‘16x4 cell window’,<br />
+b) with a ’48 pixel outline’,<br />
+c) anti-aliased enabled.<br />
+<img src="/assets/images/interface/10-change-appearance-fontforge.png" alt="example-16x4-cell-window-in-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="active-cell-settings">Active Cell Settings</h2>
+
+<ol>
+  <li>
+    <p>The next section looks at defining the ‘active cell’ settings. More specifically, when you click on a cell it becomes an active cell and we’ll be selecting a color that displays when you click on a cell.<br />
+<img src="/assets/images/interface/11-change-active-cell-settings-fontforge.png" alt="active-cell-settings-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>To change the background color an active cell,<br />
+a) Click on ‘File&gt;X Resource Editor’<br />
+<img src="/assets/images/interface/12-change-active-cell-settings-fontforge.png" alt="xresource-editor-in-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Ensure you have ‘Font View’ selected in the left hand column, then<br />
+a) change the ‘Selected BG Color’ (Background Color) to a color of your choosing.<br />
+<img src="/assets/images/interface/13-change-active-cell-settings-fontforge.png" alt="active-cell-background-color-settings-in-fontforge-user-interface" width="70%" height="70%" /><br />
+<img src="/assets/images/interface/14-change-active-cell-settings-fontforge.png" alt="active-cell-background-color-settings-in-fontforge-user-interface" width="20%" height="20%" /></p>
+  </li>
+  <li>
+    <p>To change the color of the glyph when it’s an active cell,<br />
+a) change the ‘Selected FG Color’ (Foreground Color) to a color of your choosing.<br />
+<img src="/assets/images/interface/15-resource-editor-settings-fontforge.png" alt="active-cell-foreground-color-settings-in-fontforge-user-interface" width="70%" height="70%" /><br />
+<img src="/assets/images/interface/16-change-active-cell-settings-fontforge.png" alt="active-cell-foreground-color-settings-in-fontforge-user-interface" width="20%" height="20%" /></p>
+  </li>
+  <li>
+    <p>When you have finished,<br />
+a) Click ‘Save As’ and save your settings. For this example, I’ve called my personal preferences file, ‘setting1.txt’.<br />
+b) If you click ‘OK’, the default setting will return the next time you open Fontforge.<br />
+<img src="/assets/images/interface/17-resource-editor-settings-fontforge.png" alt="save-and-name-personal-preferences-file-for-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Test out your changes by selecting a few cells. If you don’t like the colors you’ve chosen, just repeat the process until you find colors you do.<br />
+<img src="/assets/images/interface/18-change-active-cell-settings-fontforge.png" alt="testing-active-cell-foreground-and-background-color-settings-in-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="display-font---lookups">Display Font - Lookups</h2>
+
+<p>Next we’ll be changing the display font for the ‘Element&gt;Font Info&gt;Lookups’ dialogue box.</p>
+
+<ol>
+  <li>
+    <p>Here’s a picture of the default font display for ‘Lookups’. To change it, you’ll need to add a line of code to your personal preferences file.<br />
+a) <strong>Note</strong> that adding the code to Fonforge’s ‘resources’ file or ‘preferences’ file, had no effect for me on Windows 10.<br />
+<img src="/assets/images/interface/19-change-display-font-fontforge.png" alt="font-display-settings-size-style-for-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>First you need to, create a personal preferences file via ‘File&gt;X Resource Editor’.<br />
+a) It’s the file you created when you changed the active cell color in the previous step, and clicked ‘save as’.</p>
+  </li>
+  <li>
+    <p>If you haven’t already created a personal preferences file, go ahead and change any of the settings within the X Resource Editor and save your preferences to your hard drive by clicking ‘Save As’ and a box called ‘Save Resources File as’ will pop up asking you to name your file.</p>
+
+    <p>For this example, I’ve called my personal preferences file, ‘setting1.txt’.</p>
+
+    <p>a) Click ‘Save’<br />
+<img src="/assets/images/interface/17-resource-editor-settings-fontforge.png" alt="save-and-name-personal-preferences-file-for-fontforge-user-interface" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Second, you need to close Fontforge so that any changes you make to your personal preferences file will take affect the next time you start Fontforge.</p>
+  </li>
+  <li>
+    <p>Third, open your personal preferences file with Notepad or a text editor.<br />
+a) To do this, right click on your personal preferences file and select either ‘open’ - to open with Notepad, or ‘open with’ and locate Notepad or ‘Edit with Notepad++’.<br />
+<img src="/assets/images/interface/21-change-display-font-fontforge.png" alt="locate-and-open-your-personal-preferences-file-for-fontforge-user-interface" width="50%" height="50%" />  <img src="/assets/images/interface/22-change-display-font-fontforge.png" alt="choose-a-program-to-open-your-personal-preferences-file-for-fontforge-user-interface" width="20%" height="20%" /></p>
+  </li>
+  <li>
+    <p>Fourth, paste the example line of code into your personal preferences file, anywhere on a separate line or choose your own desired font, weight and size.<br />
+<img src="/assets/images/interface/23-change-display-font-fontforge.png" alt="paste-example-code-into-your-personal-preferences-file-for-fontforge-user-interface" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Fifth, save and close your personal preferences file, then open up Fontforge, and navigate to ‘Element&gt;Font Info&gt;Lookups’ to view your changes.</p>
+  </li>
+</ol>
+
+<p><strong>Included below are some examples to consider:</strong></p>
+
+<p><img src="/assets/images/interface/24-change-display-font-fontforge-trebuchet.png" alt="example-font-12pt-trebuchet" width="80%" height="80%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.FontInfo.Font: 400 12pt Trebuchet MS  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/25-change-display-font-fontforge-segoe.png" alt="example-font-11pt-segoe" width="80%" height="80%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.FontInfo.Font: 400 11pt Segoe UI  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/26-change-display-font-fontforge-Nirmala.png" alt="example-font-9pt-nirmala" width="80%" height="80%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.FontInfo.Font: 400 9pt Nirmala UI  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/27-change-display-font-fontforge-Tahoma.png" alt="example-font-10pt-tahoma" width="80%" height="80%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.FontInfo.Font: 600 10pt Tahoma  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/28-change-display-font-fontforge-verdana.png" alt="example-font-9pt-verdana" width="80%" height="80%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.FontInfo.Font: 400 9pt Verdana  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/29-change-display-font-fontforge-myriad-pro.png" alt="example-font-12pt-myriad-pro" width="80%" height="80%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.FontInfo.Font: 600 12pt Myriad Pro  
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="display-font---show-att">Display Font - Show ATT</h2>
+
+<ol>
+  <li>
+    <p>Next we’ll be changing the display font for the ‘View&gt;ShowATT’ dialogue box, just like we did in the previous step for Lookups.</p>
+
+    <p><img src="/assets/images/interface/30-change-display-font-fontforge.png" alt="showatt-display-font" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>This is what the default font looks like. To change it, you’ll need to add a line of code to your personal preferences file.<br />
+<img src="/assets/images/interface/31-change-display-font-fontforge.png" alt="adding-a-line-of-code-to-your-personal-preferences-file-for-fontforge-user-interface" width="35%" height="35%" /></p>
+  </li>
+  <li>
+    <p>Paste the example line of code into your personal preferences file, on a separate line or choose your own desired font, weight and size.<br />
+<img src="/assets/images/interface/32-change-display-font-fontforge.png" alt="insert-code-to-change-the-font-display-for-showatt" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>Save and close your personal preferences file, then open up Fontforge, and navigate to View&gt;ShowATT to view your changes.</p>
+  </li>
+</ol>
+
+<p><strong>Included below are some examples to consider:</strong></p>
+
+<p><img src="/assets/images/interface/33-change-display-font-fontforge-Tahoma.png" alt="example-font-8pt-tahoma" width="60%" height="60%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.ShowATT.Font: 400 8pt Tahoma  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/34-change-display-font-fontforge-segoe.png" alt="example-font-10pt-segoe" width="60%" height="60%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.ShowATT.Font: 400 10pt Segoe UI  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/35-change-display-font-fontforge-nirmala.png" alt="example-display-font-9pt-nirmala" width="60%" height="60%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.ShowATT.Font: 400 9pt Nirmala UI 
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/36-change-display-font-fontforge-trebuchet.png" alt="example-display-font-8pt-trebuchet" width="70%" height="70%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fontforge.ShowATT.Font: 600 8pt Trebuchet MS  
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="display-font---groups">Display Font - Groups</h2>
+
+<ol>
+  <li>
+    <p>Next we’ll be changing the display font for the ‘Encoding&gt;DisplayByGroups’ and ‘Encoding&gt;DefineGroups’ dialogue boxes, just like we did in the previous steps for Lookups and ShowATT.<br />
+<img src="/assets/images/interface/37-change-display-font-fontforge.png" alt="change-display-font-for-groups-in-fontforge" width="70%" height="70%" /></p>
+
+    <p class="note"><strong>Be aware</strong> that within a couple of seconds after opening the ‘DisplayByGroups’ or ‘DefineGroups’ dialogue box, Fontforge crashes on Windows 10. This occurs with the default font and substituted font.</p>
+  </li>
+  <li>
+    <p>This is what the default font looks like;<br />
+<img src="/assets/images/interface/38-change-display-font-fontforge.png" alt="show-current-display-font-settings" width="30%" height="30%" /></p>
+  </li>
+  <li>
+    <p>To change it, you’ll need to add a line of code to your personal preferences file. Your changes will appear the next time you open Fontforge.<br />
+<img src="/assets/images/interface/39-change-display-font-fontforge.png" alt="you'll-need-to-adding-a-line-of-code-to-your-personal-preferences-file-for-fontforge-user-interface" width="50%" height="50%" /></p>
+
+    <p><strong>Here are some examples:</strong></p>
+  </li>
+</ol>
+
+<p><img src="/assets/images/interface/40-change-display-font-fontforge-tahoma.png" alt="example-display-font-8pt-tahoma" width="50%" height="50%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Gdraw.Groups.Font: 400 8pt Tahoma  
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/41-change-display-font-fontforge-nirmala.png" alt="example-display-font-10pt-nirmala" width="50%" height="50%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Gdraw.Groups.Font: 400 10pt Nirmala UI
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="/assets/images/interface/42-change-display-font-fontforge-segoe.png" alt="example-display-font-9pt-segoe" width="50%" height="50%" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Gdraw.Groups.Font: 400 9pt Segoe UI  
+</code></pre></div></div>
+
+<p><strong>That brings us to the end of this tutorial.</strong></p>
+
+<p>I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.</p>
+
+:ET

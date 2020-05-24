@@ -1,0 +1,72 @@
+# >>> This file is only used on Local Build 4000 <<<
+# >>> When pushing to GitHub Pages, a different  <<<
+# >>> _config.yml file is used   <<<
+
+# Title of website
+title: 'Font Tutorials'
+
+description: 'The home of easy to follow tutorials on font editing software'
+baseurl: ""
+
+# Adds SEO identification iaw Schema.org
+type: HowTo
+tagline: 'Easy to follow, step by step instructions on how to use font editing software'
+
+# Jekyll theme
+theme: just-the-docs
+
+# Add a site logo for each page, also helps SEO
+logo: /assets/images/logo.png
+
+# Makes urls easy to read
+permalink: pretty
+
+# Exclude files and folders from being processed
+exclude:
+    - node_modules/
+    - '*.gem'
+    - Gemfile
+    - Gemfile.lock
+    - package.json
+    - package-lock.json
+    - script/
+    - license/
+    - privacy/
+    - lib/
+    - bin/
+    - README.md
+    - Rakefile
+# Adds search function
+search_enabled: true
+search_tokenizer_separator: '/[\s/]+/'
+
+# Language style
+markdown: kramdown
+
+# Gems to include
+gems:
+    - just-the-docs
+    - jekyll-seo-tag
+    - jekyll-sitemap
+    - rake
+# Auxillary link in TOC and top right Github link
+aux_links:
+    'Home': '/'
+    'Font Tutorials on GitHub':
+        - '//github.com/g-wallis/font-tutorials/'
+# Adds anchor links to h2-h6
+heading_anchors: true
+
+# Footer Info
+footer_content: 'Font Tutorials are distributed under an <a href="/license/">MIT License.<a> | Our <a href="/privacy">Privacy Policy</a>'
+
+# Search Engine Verification
+webmaster_verifications:
+  google: 1234
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
+  baidu: 1234
+
+# Google Analytics Tracking
+ga_tracking: UA-167494395-1

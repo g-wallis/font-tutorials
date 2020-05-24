@@ -1,0 +1,167 @@
+I"%"<center><img src="/assets/images/scale/1-how-to-scale-glyphs-fontforge.png" alt="how-to-scale-glyphs-in-fontforge" width="35%" height="35%" /></center>
+
+<h1 id="how-to-scale-glyphs-using-fontforge">HOW TO SCALE GLYPHS USING FONTFORGE</h1>
+
+<p><strong>This tutorial will show you how to scale glyphs in Fontforge.</strong></p>
+
+<h2 class="no_toc" id="how-this-tutorial-is-organized">How this Tutorial is Organized</h2>
+
+<ol>
+  <li>We’ll start with a brief definitions section.</li>
+  <li>Next we’ll select the glyphs we want to scale.</li>
+  <li>Then we’ll go through the settings within the Transform dialogue box.</li>
+  <li>Then we’ll test the scaled glyphs to make sure we’re happy with them.</li>
+</ol>
+
+<blockquote>
+  <p>i. You can download Fontforge for Windows, Mac, or Linux from <a href="https://fontforge.org/en-US/downloads/">here</a>.<br />
+ii. The font used in this tutorial is called <a href="https://www.fontsquirrel.com/fonts/lovers-quarrel">Lovers Quarrel</a>. It’s a free font for personal and commercial use with an open source license.<br />
+iii. This tutorial is shown on a Windows 10 computer with Fontforge version 03142020.<br />
+iv. Fontforge does crash, so save often.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="definitions">Definitions</h2>
+
+<p><strong>This is ‘Font View’</strong></p>
+
+<p><img src="/assets/images/scale/2-how-to-scale-glyphs-fontforge.png" alt="font-view-for-scaling-glyphs-in-fontforge" width="70%" height="70%" /></p>
+
+<hr />
+
+<h2 id="selecting-glyphs">Selecting Glyphs</h2>
+
+<p>In this tutorial we’ll be selecting all the glyphs in Lovers Quarrel.</p>
+
+<ol>
+  <li>
+    <p>To do this, make sure you’re in ‘Font View’ then,<br />
+a) Click on ‘Edit&gt;Select&gt;Select All’<br />
+ <img src="/assets/images/scale/3-how-to-scale-glyphs-fontforge.png" alt="select-all-glyphs-for-scaling-with-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Now that all the glyphs are selected,<br />
+a) Click on ‘Element&gt;Transformations&gt;Transform’.<br />
+ <img src="/assets/images/scale/4-how-to-scale-glyphs-fontforge.png" alt="transform-tool-to-scale-glyphs-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>The transform dialogue box will pop up and the next step will be to change the settings.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="transform-dialogue-box">Transform Dialogue Box</h2>
+
+<ol>
+  <li>
+    <p>The transform’ dialogue box includes several settings for you to consider, including performing a sequence of events.<br />
+a) This tutorial does not explore sequences.</p>
+  </li>
+  <li>
+    <p>Start by clicking on the drop down box next to the word ‘Origin:’ then,<br />
+a) select ‘Glyph Origin’ from the list.</p>
+
+    <p>i. Selecting the ‘Glyph Origin’ option will scale our glyphs without compromising the original font structure, meaning kerning and spacing is maintained.<br />
+ <img src="/assets/images/scale/5-how-to-scale-glyphs-fontforge.png" alt="transform-settings-to-scale-glyphs-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Next chose one of the following:<br />
+a) Click ‘Scale Uniformly’ if you intend on scaling the width and height equally, or<br />
+b) Click ‘Scale’ if you intend to scale with different width and height percentages.<br />
+ For this tutorial, we’ll be selecting ‘Scale Uniformly’.<br />
+ <img src="/assets/images/scale/6-how-to-scale-glyphs-fontforge.png" alt="how-to-scale-glyphs-in-fontforge-using-the-transform-tool" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Enter your scale dimensions out of 100.<br />
+a) I use between 140% - 160% when glyphs are around 600 above the baseline.</p>
+  </li>
+  <li>
+    <p>If you would like to do more transforming and perform a sequence,<br />
+a) Select the ‘Do Nothing’ drop down boxes, and choose the events that will occur after scaling.</p>
+  </li>
+  <li>
+    <p>In this guide, we just want to scale, therefore we’ll be selecting ‘Do Nothing’.</p>
+  </li>
+  <li>
+    <p>If you’ve inserted additional ‘Layers’, or ‘Guide Layers,’ tick these two boxes, otherwise leave them unticked.</p>
+  </li>
+  <li>
+    <p>Tick the next three (3) boxes, then<br />
+a) Click on ‘OK’.<br />
+<img src="/assets/images/scale/7-how-to-scale-glyphs-fontforge.png" alt="transform-settings-to-scale-glyphs-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>Now wait for the transformation action to occur.<br />
+<img src="/assets/images/scale/8-how-to-scale-glyphs-fontforge.png" alt="scaled-results-in-font-view" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="review--test">Review &amp; Test</h2>
+
+<ol>
+  <li>
+    <p>Next, we’ll look at two (2) options to review and test our scaled glyphs,<br />
+a) using Fontforge’s ‘Metrics View’, and<br />
+b) generate and install the font, and test it in Adobe Photoshop and Adobe Illustrator.</p>
+
+    <h3 id="metrics-view-testing">Metrics View Testing</h3>
+  </li>
+  <li>
+    <p>First we’ll review and test our scaled glyphs in ‘Metrics View’. Start from ‘Font View’ then,<br />
+a) click on ‘Metrics&gt;New Metrics Window’<br />
+<img src="/assets/images/scale/9-how-to-scale-glyphs-fontforge.png" alt="testing-scaled-glyphs-in-metrics-view" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>With the ‘Metrics View’ open,<br />
+a) type into the text box and review each glyph for inconsistencies or things you want to change.</p>
+  </li>
+  <li>
+    <p>For example, I’ve typed in ‘own fox jumps’ and noticed a couple of letters don’t join up. This can be fixed using the kerning feature in Fontforge.<br />
+a) I’ve circled these in red for illustration purposes.<br />
+<img src="/assets/images/scale/10-how-to-scale-glyphs-fontforge.png" alt="identifying-errors-in-metrics-view" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>This is what it looks like after adjusting the kerning.<br />
+a)  It turns out the ‘o’ and ‘x’ are vertically apart and need to be manually extended in ‘Char View’.<br />
+<img src="/assets/images/scale/11-how-to-scale-glyphs-fontforge.png" alt="review-after-fixing-kerning" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>How to kern will not be discussed in this tutorial because it’s such a big topic and this tutorial is focused on how to scale glyphs.</p>
+
+    <h3 id="generating-and-installing-the-font">Generating and Installing the Font</h3>
+  </li>
+  <li>
+    <p>Now we’ll look at reviewing and testing the scaled glyphs by generating and installing the font.</p>
+  </li>
+  <li>
+    <p>If you’re unsure on what to do with the ‘generate font’ settings, head on over to my <a href="/abg-thumbnails/#generating-your-font">Abg Font Thumbnail</a> tutorial for detailed instructions on generating fonts.</p>
+  </li>
+  <li>
+    <p>After you’ve generated your updated font,<br />
+a) compare your scaled font with the original by double clicking on the font thumbnails to open.<br />
+<img src="/assets/images/scale/12-how-to-scale-glyphs-fontforge.png" alt="thumbnail-of-original-font-size" width="20%" height="20%" />  <img src="/assets/images/scale/13-how-to-scale-glyphs-fontforge.png" alt="thumbnail-of-scaled-size" width="20%" height="20%" /><br />
+<img src="/assets/images/scale/14-how-to-scale-glyphs-fontforge.png" alt="font-window-comparison-of-original-and-scaled-glyphs" width="60%" height="60%" /></p>
+  </li>
+  <li>
+    <p>Identify areas you may want to change.</p>
+  </li>
+  <li>
+    <p>For example, I’ve circled these in red for illustration purposes.<br />
+<img src="/assets/images/scale/15-how-to-scale-glyphs-fontforge.png" alt="red-circled-errors-to-fix" width="90%" height="90%" /></p>
+  </li>
+  <li>
+    <p>I then installed the scaled font and opened Adobe Photoshop and Adobe Illustrator and tested the font, to see if it needed changes or it’s simply part of the font style.<br />
+<img src="/assets/images/scale/16-how-to-scale-glyphs-fontforge.png" alt="adobe-photoshop-font-preview-of-scaled-glyphs" width="33%" height="33%" />  <img src="/assets/images/scale/17-how-to-scale-glyphs-fontforge.png" alt="adobe-illustrator-font-preview-of-scaled-glyphs" width="35%" height="35%" /><br />
+<img src="/assets/images/scale/18-how-to-scale-glyphs-fontforge.png" alt="adobe-photoshop-font-preview-of-scaled-glyphs" width="43%" height="43%" />  <img src="/assets/images/scale/19-how-to-scale-glyphs-fontforge.png" alt="adobe-illustrator-font-preview-of-scaled-glyphs" width="35%" height="35%" /></p>
+  </li>
+</ol>
+
+<p><strong>That brings us to the end of this tutorial</strong></p>
+
+<p>I hope this tutorial has been of assistance and you can put some of the information to good use when scaling glyphs.</p>
+
+:ET

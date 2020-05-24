@@ -1,0 +1,229 @@
+I"o/<center><img src="/assets/images/thumbnail/1-how-to-change-abg-font-thumbnail.png" alt="fix-abg-letters-thumbnails-before-and-after" width="35%" height="35%" /></center>
+
+<h1 id="how-to-change-the-abg-text-on-font-thumbnails-using-fontforge">HOW TO CHANGE THE Abg TEXT ON FONT THUMBNAILS USING FONTFORGE</h1>
+
+<p><strong>This tutorial will show you how to change the Abg text on font thumbnails using Fontforge.</strong></p>
+
+<p><img src="/assets/images/thumbnail/2-how-to-fix-abg-font-thumbnails.png" alt="how-to-fix-abg-font-thumbnails-before-and-after" width="30%" height="30%" /></p>
+
+<h2 class="no_toc" id="how-this-tutorial-is-organized">How this Tutorial is Organized</h2>
+
+<ol>
+  <li>We’ll start with opening the font.</li>
+  <li>Then we’ll change the encoding settings.</li>
+  <li>Next, we’ll specify the character page settings so an English Abg will display on your thumbnail.</li>
+  <li>And lastly, I’ll show you how to generate your updated font and briefly outline the settings required to do this.</li>
+</ol>
+
+<blockquote>
+  <p>i. You can download Fontforge for Windows, Mac, or Linux from <a href="https://fontforge.org/en-US/downloads/">here</a>.<br />
+ ii. The font used in this tutorial is called <a href="https://www.fontsquirrel.com/fonts/lovers-quarrel">Lovers Quarrel</a>. It’s a free font for personal and commercial use with an open source license.<br />
+ iii. This tutorial is shown on a Windows 10 computer with Fontforge version 03142020.<br />
+ iv. Fontforge does crash, so save often.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="opening-a-font">Opening A Font</h2>
+
+<ol>
+  <li>
+    <p>We’ll begin this tutorial by selecting a font and opening it in Fontforge.</p>
+  </li>
+  <li>
+    <p>The first screen to pop up in Fontforge will be the ‘Open Font’ dialogue box where you can navigate and select your font file, using either,<br />
+a) The ‘arrow’ button (1),<br />
+b) the ‘dropdown’ bar (2), or<br />
+c) typing into the address bar (3).<br />
+ <img src="/assets/images/thumbnail/3-how-to-open-fontforge.png" alt="how-to-open-fontforge" width="40%" height="40%" /></p>
+  </li>
+  <li>
+    <p>Once located and selected, click ‘OK’.<br />
+ <img src="/assets/images/thumbnail/4-how-to-use-fontforge.png" alt="how-to-use-fontforge" width="40%" height="40%" /></p>
+  </li>
+  <li>
+    <p>Ignore error or warning dialogue boxes that may pop up.<br />
+ <img src="/assets/images/thumbnail/5-fontforge-warning.png" alt="opening-fontforge-warning-pop-up" width="50%" height="50%" /></p>
+  </li>
+  <li>
+    <p>After clicking ‘OK’, Fontforge will open your font where you’ll see each glyph has its own cell. This screen or interface is called ‘Font View’. In the next step I’ll show you how to change the encoding settings from ‘Font View’.<br />
+ <img src="/assets/images/thumbnail/6-change-abg-font-thumbnail.png" alt="font-view-fontforge-abg-thumbnails" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="encoding-settings">Encoding Settings</h2>
+
+<ol>
+  <li>
+    <p>Next we’ll change the font’s encoding settings. To do this,<br />
+a) click on ‘Encoding&gt;Reencode’<br />
+b) then click on your preferred Unicode format.<br />
+c) In this tutorial we’ll be selecting ‘ISO 10646-1 (Unicode, Full)’ because it’s a large set of all the other Unicode formats, which guarantees no information or glyph is lost when re-encoding.<br />
+<img src="/assets/images/thumbnail/7-fix-abg-font-thumbnails.png" alt="fix-abg-thumbnail-reencode-font-settings" width="65%" height="65%" /></p>
+  </li>
+  <li>
+    <p>Further information on <a href="https://fontforge.org/docs/ui/menus/encodingmenu.html">encoding</a> can be found in Fontforge documentation.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="character-settings">Character Settings</h2>
+
+<ol>
+  <li>
+    <p>Now we need to change the character settings, because this defines the Abg thumbnail.<br />
+a) What this means is, if character settings are set to display Mathematical Operators for Abg, then the thumbnail will show mathematical symbols that represent Abg, instead of an English Abg.</p>
+
+    <p>b) In other words, if you see Greek Abg instead of an English Abg, then the font’s character settings are set to ‘Greek and Coptic’.</p>
+
+    <p>c) Or Cyrillic Abg instead of an English Abg, then the character settings are set to ‘Cyrillic’.<br />
+<img src="/assets/images/thumbnail/8-how-to-change-abg-font-thumbnail.png" alt="example-wrong-abg-font-thumbnail" width="35%" height="35%" /></p>
+  </li>
+  <li>
+    <p>The below table provides a visual representation of what I’ve just described.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center">Abg</th>
+          <th>Character Set</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">∑√ ≠</td>
+          <td>Mathematical Operators (Suppl. &amp; Misc.)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Aβγ</td>
+          <td>Greek and Coptic, 1253 Greek</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Абф</td>
+          <td>Cyrillic &amp; Supplement, 1251 Cyrillic</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Looking at the thumbnail for Lovers Quarrel, which displays one mathematical symbol and nothing else, we’ll need to turn off the Mathematical Operator character settings, so that Abg will display on our thumbnail.<br />
+<img src="/assets/images/thumbnail/9-change-abg-font-thumbnail.png" alt="how-to-fix-abg-font-thumbnails-before-Lover's-Quarrel" width="20%" height="20%" /></p>
+  </li>
+  <li>
+    <p>To change the character settings, make sure you’re back in ‘Font View’ then,<br />
+a) Click on ‘Element&gt;Font Info’.<br />
+<img src="/assets/images/thumbnail/10-change-abg-font-thumbnail.png" alt="character-settings-for-changing-font-Abg-thumbnail" width="70%" height="70%" /></p>
+
+    <h3 id="os2-charsets">OS/2 Charsets</h3>
+  </li>
+  <li>
+    <p>On the next screen that pops up,<br />
+a) you’ll need to select ‘OS/2’ in the left hand column,<br />
+b) then click on the tab called ‘Charsets’ on the right.<br />
+<img src="/assets/images/thumbnail/11-how-to-fix-abg-font-thumbnails.png" alt="OS/2-character-settings-to-change-abg-font-thumbnail" width="70%" height="70%" /></p>
+
+    <h4 id="unicode-ranges">Unicode Ranges</h4>
+  </li>
+  <li>
+    <p>Next we’ll focus on the top box called ‘Unicode Ranges’, where you can see a number of lines are selected in blue.<br />
+a) scroll down the ‘Unicode Ranges’ box and locate ‘Math Operators &amp; Sup Math Operators’,<br />
+b) then de-select this line by holding down Ctrl on the keyboard and left mouse click.<br />
+or<br />
+c) you can de-select everything by clicking on an unselected line or white area.<br />
+d) then select ‘Basic Latin’ which is the first (1st) line, when you scroll back to the top.<br />
+<img src="/assets/images/thumbnail/12-how-to-change-abg-font-thumbnail.png" alt="unicode-ranges-maths-to-fix-Abg-font-thumbnail" width="70%" height="70%" /></p>
+
+    <h4 id="ms-code-pages">MS Code Pages</h4>
+  </li>
+  <li>
+    <p>Now we’ll scroll through the bottom box called ‘MS Code Pages’, to see if there are any unusual lines selected.<br />
+a) You can de-select by holding down Ctrl on the keyboard and left mouse click.<br />
+b) As Lovers Quarrel is a Latin font, anything unusual would be anything other than Latin.</p>
+  </li>
+  <li>
+    <p>When scrolling through this box for Lovers Quarrel, it looks normal with only 2 lines and therefore we will not de-select anything.<br />
+a) 1252, Latin-1 and<br />
+b) Mac Roman.</p>
+  </li>
+  <li>
+    <p>When you’ve finished,<br />
+a) Click ‘OK’ to save your changes and we’ll be taken back to ‘Font View’.<br />
+<img src="/assets/images/thumbnail/13-change-abg-font-thumbnail.png" alt="code-pages-settings-to-change-abg-font-thumbnail" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="generating-your-font">Generating Your Font</h2>
+
+<ol>
+  <li>
+    <p>We are now ready to generate our updated font.<br />
+a) Click on ‘File&gt;Generate Fonts’.<br />
+<img src="/assets/images/thumbnail/14-fontforge-generate.png" alt="generating-your-font-settings-for-changing-font-Abg-thumbnail" width="60%" height="60%" /></p>
+  </li>
+  <li>
+    <p>The next dialogue box that pops up is called ‘Generate Fonts’ where we’ll make changes by,<br />
+a) re-naming our font or changing the folder we’re saving to, making sure we don’t save over the top of our original font, then<br />
+b) Untick ‘Validate Before Saving’, then<br />
+c) Make sure ‘No Bitmap Fonts’ and ‘No Rename’ are displayed in the dropdown boxes.<br />
+<img src="/assets/images/thumbnail/15-fix-abg-font-thumbnail.png" alt="generate-font-settings-to-fix-Abg-font-thumbnail" width="45%" height="45%" /></p>
+
+    <h3 id="truetype-or-opentype">TrueType or OpenType</h3>
+  </li>
+  <li>
+    <p>Now we will be determining whether our font will be True Type TTF or Open Type OTF by,<br />
+a) clicking the drop down menu button, (mine displays ‘OpenType(CFF)’, the last setting I used).<br />
+b) Then select your preferred format.</p>
+
+    <p>i. The common formats are TrueType or OpenType.<br />
+ii. In this example, we’ll be selecting OpenType-CFF.<br />
+<img src="/assets/images/thumbnail/16-change-abg-font-thumbnail.png" alt="opentype-truetype-settings-when-generating-your-font" width="45%" height="45%" /></p>
+
+    <h3 id="options-box">Options Box</h3>
+  </li>
+  <li>
+    <p>Next, we’ll be clicking on the button called ‘Options’ which will bring up another small dialogue box called ‘Options’.<br />
+<img src="/assets/images/thumbnail/17-fix-abg-font-thumbnail.png" alt="generate-font-options-settings-for-changing-font-Abg-thumbnail" width="45%" height="45%" /></p>
+  </li>
+  <li>
+    <p>In the ‘Options’ dialogue box there are a number of settings to consider.</p>
+  </li>
+  <li>
+    <p>The ‘Options’ box should be auto populated with the original font’s settings.</p>
+  </li>
+  <li>
+    <p>If Fontforge doesn’t auto populate the ‘Options’ box, the following settings can be used. This applies to other fonts you want to generate as well.<br />
+a) Tick ‘Hints’ and ‘Flex Hints’<br />
+b) Tick the next four (4) boxes (TrueType Hints, PS Glyph Names, Apple, and OpenType)<br />
+c) Tick ‘Lookup Names’.</p>
+  </li>
+  <li>
+    <p>By selecting Apple, as well as the others mentioned, your font can be installed on both Mac and Windows operating systems.</p>
+  </li>
+  <li>
+    <p>When you have finished,<br />
+a)  click ‘OK’ to save your settings.<br />
+<img src="/assets/images/thumbnail/18-how-to-fontforge-options.png" alt="generate-font-options-settings-for-changing-font-Abg-thumbnail" width="45%" height="45%" /></p>
+  </li>
+  <li>
+    <p>Now you’ll be back in the ‘Generate Fonts’ dialogue box, where you can,<br />
+a) click ‘Generate’ to generate and save your updated font, to your nominated file path ready for reviewing.<br />
+<img src="/assets/images/thumbnail/19-fix-abg-font-thumbnail.png" alt="generating-your-font-dialogue-box" width="45%" height="45%" /></p>
+  </li>
+</ol>
+
+<p class="blockquote">If you’re on this page from another tutorial you can now head back there.<br />
+<span class="fs-3"><a href="/font-names/#generating-your-font" class="btn mr-2">Back to Font Names</a>  <a href="/scale-glyphs/#review--test" class="btn">Back to Scale Glyphs</a></span></p>
+
+<p><strong>Congratulations on making it to the end.</strong></p>
+
+<p>Tada! You have successfully updated your first Abg font thumbnail. If you’d like to see your font directory organized so that font styles are grouped in the same family, click on the tutorial for <a href="/font-names">font names</a>.</p>
+
+<p>I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.<br />
+<img src="/assets/images/thumbnail/20-change-abg-font-thumbnail.png" alt="finished-picture-of-abg-font-thumbnail" width="15%" height="15%" /></p>
+
+:ET

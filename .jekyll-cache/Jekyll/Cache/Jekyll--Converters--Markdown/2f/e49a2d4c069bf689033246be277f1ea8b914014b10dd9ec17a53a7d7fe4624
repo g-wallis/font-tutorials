@@ -1,0 +1,14 @@
+I"Ø<ul class="toc-list">
+  <li class="toc-item"><a href="#definitions">Definitions</a></li>
+  <li class="toc-item"><a href="#creating-glyphs">Creating Glyphs</a></li>
+  <li class="toc-item"></li>
+  <li class="toc-item"><a href="#single-substitution-lookup-table">Single Substitution Lookup Table</a></li>
+  <li class="toc-item"><a href="#single-substitution-subtable">Single Substitution Subtable</a></li>
+  <li class="toc-item"><a href="#problems-completing-the-subtable">Problems Completing the Subtable</a></li>
+  <li class="toc-item"><a href="#contextual-chaining-substitution-lookup">Contextual Chaining Substitution Lookup</a></li>
+  <li class="toc-item"><a href="#contextual-subtable">Contextual Subtable</a></li>
+  <li class="toc-item"><a href="#testing-your-formula">Testing Your Formula</a></li>
+  <li class="toc-item"><a href="#alternate-formula-examples">Alternate Formula Examples</a></li>
+  <li class="toc-item"><a href="#its-not-working">Itâ€™s Not Working</a></li>
+</ul>
+:ET

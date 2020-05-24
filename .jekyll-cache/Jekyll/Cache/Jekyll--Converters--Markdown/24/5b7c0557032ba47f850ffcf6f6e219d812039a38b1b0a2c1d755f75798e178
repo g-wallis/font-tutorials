@@ -1,0 +1,140 @@
+I"\<center><img src="/assets/images/pdf/1-how-to-extract-fonts-pdf-fontforge.png" alt="how-to-extract-fonts-from-pdf-in-fontforge" width="35%" height="35%" /></center>
+
+<h1 id="how-to-extract-fonts-from-a-pdf-file-using-fontforge">HOW TO EXTRACT FONTS FROM A PDF FILE USING FONTFORGE</h1>
+
+<p><strong>This tutorial will show you how to extract fonts from a PDF file using Fontforge.</strong></p>
+
+<h2 class="no_toc" id="how-this-tutorial-is-organized">How this Tutorial Is Organized</h2>
+
+<ol>
+  <li>A brief outline on the limitations regarding font extraction.</li>
+  <li>Then we’ll go through an example where a partial font can be extracted.</li>
+  <li>Followed by a second example where no font can be extracted.</li>
+</ol>
+
+<blockquote>
+  <p>i. You can download Fontforge for Windows, Mac, or Linux from <a href="https://fontforge.org/en-US/downloads/">here</a>.<br />
+ ii. The documents used in this tutorial are <a href="http://s3.amazonaws.com/arena-attachments/2584673/e36028a1643a616ec4be1e8d0e859fbb.pdf?1534885560">Elements of Typographic Style v3 – Extract</a> and <a href="https://kltf.de/downloads/FontNaming-kltf.pdf">FontNaming-kltf</a>.<br />
+ iii. This tutorial is shown on a Windows 10 computer with Fontforge version 03142020.<br />
+ iv. Fontforge does crash, so save often.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="extracting-limitations">Extracting Limitations</h2>
+
+<p>The following factors need to be considered when using Fontforge to extracts glyphs from a PDF;</p>
+
+<ol>
+  <li>
+    <p>Not all PDF documents can be read by Fontforge, because PDF documents can have restrictions, formatting peculiarities, embedded font, glyphs as pictures or some other configuration.</p>
+  </li>
+  <li>
+    <p>Sometimes when a font is embedded into a PDF it will only contain the glyphs used.<br />
+a) For example, if the PDF document you are trying to extract from does not contain the letter ‘Z’, then that letter will not be present.</p>
+  </li>
+  <li>
+    <p>Where all the glyphs are present in the PDF document, Fontforge may not extract them all.<br />
+a) This could be down to Fontforge’s code capabilities, the PDF format, it’s subsetting and optimization, locked or embedded PDF settings, or perhaps a little of both.</p>
+  </li>
+  <li>
+    <p>Most PDFs which are online, only embed subets of the font and not the full font.<br />
+a) Extracting a subset of a font is only useful in a very limited scope, if at all.</p>
+  </li>
+  <li>
+    <p>When processing your extraction, Fontforge may display error dialogue boxes.<br />
+a) If there are errors in the file, you can choose to ignore them or save the file and edit them.<br />
+b) Most of the errors can be fixed automatically if you click “Fix” enough times.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="partial-extraction">Partial Extraction</h2>
+
+<ol>
+  <li>
+    <p>With this knowledge, we’ll begin with an example that produces a partial font extraction.</p>
+  </li>
+  <li>
+    <p>Start by opening Fontforge, and on the first dialogue box,<br />
+a) click on the button next to ‘Filter’,<br />
+b) Select ‘Extract from PDF’ from the list,</p>
+
+    <p><img src="/assets/images/pdf/2-how-to-extract-fonts-pdf-fontforge.png" alt="open-fontforge-select-extract-pdf-font" width="40%" height="40%" /></p>
+
+    <p>c) Then, locate and select your PDF file,<br />
+d) Click ‘OK’.</p>
+
+    <p><img src="/assets/images/pdf/3-how-to-extract-fonts-pdf-fontforge.png" alt="open-fontforge-select-file-extract-font-from-pdf" width="40%" height="40%" /></p>
+  </li>
+  <li>
+    <p class="tip"><strong>Be aware</strong> that completing step c) before b) will not show any PDF file to select. You must complete step b) before c) for PDF files to be recognized.</p>
+  </li>
+  <li>
+    <p>If Fontforge is able to detect glyphs from the PDF, a dialogue box called ‘Pick a font’ will pop up listing the fonts detected within the PDF.<br />
+a) Select your preferred font and click ‘OK’.</p>
+
+    <p><img src="/assets/images/pdf/4-how-to-extract-fonts-pdf-fontforge.png" alt="select-font-to-extract-from-list" width="30%" height="30%" /></p>
+  </li>
+  <li>
+    <p>You’ll be taken to ‘Font View’ where you can see the extracted glyphs.</p>
+
+    <p><img src="/assets/images/pdf/5-how-to-extract-fonts-pdf-fontforge.png" alt="displays-result-of-font-from-pdf-extraction" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>From here you can either,<br />
+a) abandon the whole idea,<br />
+b) go ahead with the glyphs that have been extracted, or<br />
+c) try another PDF document.</p>
+  </li>
+  <li>
+    <p>To view, only the cells which have glyphs,<br />
+a) click on ‘Encoding&gt;Compact’</p>
+
+    <p><img src="/assets/images/pdf/6-how-to-extract-fonts-pdf-fontforge.png" alt="compact-view-of-extracted-glyphs" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>With only the extracted glyphs visible, you’re now in a position to decide what to do next.</p>
+
+    <p><img src="/assets/images/pdf/7-how-to-extract-fonts-pdf-fontforge.png" alt="compact-view-of-extracted-glyphs" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>To be able to view all the extracted glyphs, neatly on screen, I’ll go ahead, and delete all the cells where the glyph is represented as a ‘square’.</p>
+
+    <p><img src="/assets/images/pdf/8-how-to-extract-fonts-pdf-fontforge.png" alt="delete-empty-glyphs-from-extracted-fonts-from-pdf-in-fontforge" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>And to hide these empty glyphs I’ll need to go back and,<br />
+a) click on ‘Encoding&gt;Compact’ which will expand the table, then<br />
+b) repeat this action by clicking on ‘Encoding&gt;Compact’.</p>
+
+    <p><img src="/assets/images/pdf/9-how-to-extract-fonts-pdf-fontforge.png" alt="repeat-compact-process-two-times-to-view-extracted-glyphs" width="70%" height="70%" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="no-extraction">No Extraction</h2>
+
+<ol>
+  <li>
+    <p>For the next example, I repeated the same steps above only selecting a different PDF file, ‘FontNaming-ktlf.pdf’.</p>
+  </li>
+  <li>
+    <p>On this occasion, Fontforge is not able to read the PDF. In this situation Fontforge displays two (2) pop up dialogue boxes outlining the reason why.<br />
+a) The dialogue box advises that the font is encrypted and cannot be read.</p>
+
+    <p><img src="/assets/images/pdf/10-how-to-extract-fonts-pdf-fontforge.png" alt="warning-box-advising-font-cannot-be-read" width="45%" height="45%" /></p>
+
+    <p><img src="/assets/images/pdf/11-how-to-extract-fonts-pdf-fontforge.png" alt="warning-box-advising-font-cannot-be-read-it's-encrypted" width="70%" height="70%" /></p>
+  </li>
+  <li>
+    <p>As a result, there’s nothing more that can be done on this PDF to extract it’s font using Fontforge.</p>
+  </li>
+</ol>
+
+<p><strong>That brings us to the end of this tutorial.</strong></p>
+
+<p>I hope this tutorial has been of assistance and you can put some of the information to good use when extracting fonts from a PDF.</p>
+:ET
