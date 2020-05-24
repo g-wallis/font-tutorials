@@ -12,7 +12,7 @@ type: HowTo
 tagline: 'Easy to follow, step by step instructions on how to use font editing software'
 
 # Jekyll theme
-remote_theme: just-the-docs
+theme: just-the-docs
 
 # Add a site logo for each page, also helps SEO
 logo: /assets/images/logo.png
