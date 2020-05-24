@@ -5,7 +5,7 @@
 title: 'Font Tutorials'
 
 description: 'The home of easy to follow tutorials on font editing software'
-baseurl: "https://www.fonttutorials.com"
+baseurl: ""
 
 # Adds SEO identification iaw Schema.org
 type: HowTo
