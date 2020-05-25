@@ -3,8 +3,8 @@
 # > _config.yml file is used, where two items are replaced:  <<<
 # > theme = remote theme: pmarsceill/just-the-docs  <<<
 # > baseurl:"" = baseurl: "https://www.website.com"   <<<
-# > I did not have this problem. I used the one _config.yml <<<
-# > file, and did not assign a 'github-theme' in settings.    <<<
+# > I did not have this problem. I used the one _config.yml file,<<<
+# > and did not assign a 'github-theme' in repository settings. <<<
 
 # Title of website
 title: 'Font Tutorials'
