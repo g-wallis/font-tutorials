@@ -9,8 +9,6 @@ nav_exclude: true
 
 This repository contains the documentation for Font Tutorials, the home of easy to follow tutorials on various font editing software programs.  
 
----
-
 ## Jekyll Themes  
 
 Font Tutorials uses a modified Jekyll theme for documentation called [just-the-docs].  
@@ -28,13 +26,9 @@ Modifications are found within the following files:
 - default.html includes a line of code to incoporate the toc  
 - toc.html this is an additional file, to accomodate allejo's [toc]  
 
----
-
 ## Known Issues  
 
 The site's search function does't work comprehensively and we are waiting for just-the-docs to fix it.  
-
----
 
 ## Contribute  
 
@@ -44,42 +38,44 @@ If you'd like to submit a tutorial or article you've written about fonts, to us,
 
 Something wrong? Let us know by opening an issue or submitting a pull request with the updated information.
 
----
-
 ### Content Guidelines  
 
 - Try to stay consistent with existing content.  
 - Introduce acronyms before using them.  
-- styles are found within the overrides.scss file, and include the following;
+- styles are found within the overrides.scss file, and include the following;  
 
 tip callout  
-     {: .tip}
+
+     {: .tip }       
 {: .tip}
 
 Note callout  
+
      {: .note}  
 {: .note}
 
 Warning callout  
+
      {: .warning}  
 {: .warning}
 
 Indented clear callout  
-     {: .blockquote}
+
+     {: .blockquote}  
 {: .blockquote}
 
 Indented square blue callout  
-     {: .blockblue}
+
+     {: .blockblue}  
 {: .blockblue}
 
 > Block quote  
      >
 
 Button
+
      {: .btn}  
 {: .btn}
-
----
 
 ## Support or Contact  
 
@@ -90,8 +86,6 @@ Having trouble with just-the-docs? Check out [just-the-docs] and they’ll help 
 Want more information on adding a table-of-contents to your site using allejo's toc? Head to allejo's [toc] page on Github and the community over there will help you out.  
 
 Got a question for us? Get in touch by opening a pull request or issue. We'd love to hear from you.  
-
----
 
 ## License & Copyright  
 
