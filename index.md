@@ -16,25 +16,8 @@ More instructions will be added for Fontforge, FontCreator 13 and FontLab7.
 
 ### The First Set of Instructions are for Fontforge  
 
-[How to Scale Glyphs Using Fontforge](https://www.fonttutorials.com/scale-glyphs/)
+[<img src="/assets/images/pdf/0-how-to-extract-fonts-pdf-fontforge.png" alt="how-to-extract-fonts-from-pdf-in-fontforge" width="30%" height="30%"/>](/extract-pdf) [<img src="/assets/images/scale/0-how-to-scale-glyphs-fontforge.png" alt="how-to-scale-glyphs-in-fontforge" width="26%" height="26%"/>](/scale-glyphs) [<img src="/assets/images/interface/0-how-to-change-user-interface-fontforge.png" alt="how-to-change-display-settings-using-fontforge" width="28%" height="28%"/>](/user-interface)  
+ 
+[<img src="/assets/images/ligature2/0-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="30%" height="30%"/>](/create-ligatures2) [<img src="/assets/images/contextual/0-how-to-create-contextual-lookups-fontforge.png" alt="how-to-create-contextual-lookup-table-in-fontforge" width="30%" height="30%"/>](/contextual-lookups) [<img src="/assets/images/ligature1/0-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="30%" height="30%"/>](/create-ligatures1)  
 
-[How to Extract Fonts From PDF Files Using Fontforge](https://www.fonttutorials.com/extract-pdf/)
-
-[How to Add Ligatures Using Fontforge, via Glyph Info](https://www.fonttutorials.com/create-ligatures2/)
-
-[How to Add Ligatures Using Fontforge, via Font Info](https://www.fonttutorials.com/create-ligatures1/)
-
-[How to Create Contextual Lookups Using Fontforge](https://www.fonttutorials.com/contextual-lookups/)
-
-[How to Change Some of the User Interface Settings Within Fontforge](https://www.fonttutorials.com/user-interface/)
-
-[How to Create Contextual Chaining Lookups Using Fontforge](https://www.fonttutorials.com/contextual-chain/)
-
-[How to Change the Abg Text on Font Thumbnails Using Fontforge](https://www.fonttutorials.com/abg-thumbnails)
-
-[How To Name A Font Family In Fontforge](https://www.fonttutorials.com/font-names/)
-
-
-[Just the Docs]: https://github.com/pmarsceill/just-the-docs  
-[jekyll-toc]: https://github.com/allejo/jekyll-toc  
-[Font Tutorials]: https://github.com/sakura22/Font-Tutorials  
+[<img src="/assets/images/chain/0-how-to-create-chained-contextual-lookup-fontforge.png" alt="how-to-create-contextual-chaining-lookup-table-in-fontforge" width="32%" height="32%"/>](/contextual-chain) [<img src="/assets/images/thumbnail/0-how-to-change-abg-font-thumbnail.png" alt="how-to-fix-abg-font-thumbnails-before-and-after" width="29%" height="29%"/>](/abg-thumbnails) [<img src="/assets/images/name/0-how-to-name-font-families-fontforge.png" alt="how-to-name-font-families-in-fontforge" width="30%" height="30%"/>](/font-names)  

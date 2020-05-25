@@ -1,20 +1,12 @@
-# > This file is used by GitHub Pages, when deploying online <<<
-# > When building locally, some people comment that a different <<<
-# > _config.yml file is used, where two items are replaced:  <<<
-# > theme = remote theme: pmarsceill/just-the-docs  <<<
-# > baseurl:"" = baseurl: "https://www.website.com"   <<<
-# > I did not have this problem. I used the one _config.yml file,<<<
-# > and did not assign a 'github-theme' in repository settings. <<<
-
 # Title of website
-title: 'Font Tutorials'
+title: Font Tutorials
 
-description: 'The home of easy to follow tutorials on font editing software'
+description: The home of easy to follow tutorials on font editing software
 baseurl: ""
 
 # Adds SEO identification iaw Schema.org
 type: HowTo
-tagline: 'Easy to follow, step by step instructions on how to use font editing software'
+tagline: Easy to follow, step by step instructions on how to use font editing software
 
 # Jekyll theme
 theme: just-the-docs
@@ -56,14 +48,14 @@ gems:
 
 # Auxillary link in TOC and top right Github link
 aux_links:
-    'Home': '/'
-    'Font Tutorials on GitHub':
-        - '//github.com/g-wallis/font-tutorials/'
+    "Home": "/"
+    "Font Tutorials on GitHub":
+        - "//github.com/g-wallis/font-tutorials/"
 # Adds anchor links to h2-h6
 heading_anchors: true
 
 # Footer Info
-footer_content: 'Font Tutorials are distributed under an <a href="/license/">MIT License.<a> | Our <a href="/privacy">Privacy Policy</a>'
+footer_content: Font Tutorials are distributed under an open source <a href="/license">MIT License.<a> | Our <a href="/privacy">Privacy Policy</a>
 
 # Search Engine Verification
 webmaster_verifications:
