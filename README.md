@@ -1,13 +1,6 @@
----
-layout: page
-title: README
-permalink: /readme/
-nav_exclude: true
----
-
 # Font Tutorials  
 
-This repository contains the documentation for Font Tutorials, the home of easy to follow tutorials on various font editing software programs.  
+This repository contains the documentation for Font Tutorials, the home of easy to follow tutorials on various font editing software programs. The compiled documentation can be found at https://www.fonttutorials.com  
 
 ## Jekyll Themes  
 
@@ -42,40 +35,7 @@ Something wrong? Let us know by opening an issue or submitting a pull request wi
 
 - Try to stay consistent with existing content.  
 - Introduce acronyms before using them.  
-- styles are found within the overrides.scss file, and include the following;  
-
-tip callout  
-
-     {: .tip }       
-{: .tip}
-
-Note callout  
-
-     {: .note}  
-{: .note}
-
-Warning callout  
-
-     {: .warning}  
-{: .warning}
-
-Indented clear callout  
-
-     {: .blockquote}  
-{: .blockquote}
-
-Indented square blue callout  
-
-     {: .blockblue}  
-{: .blockblue}
-
-> Block quote  
-     >
-
-Button
-
-     {: .btn}  
-{: .btn}
+- styles are found within the overrides.scss file.  
 
 ## Support or Contact  
 
