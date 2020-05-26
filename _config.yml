@@ -47,7 +47,6 @@ gems:
 
 # Auxillary link in TOC and top right Github link
 aux_links:
-    "Home": "/"
     "Font Tutorials on GitHub":
         - "//github.com/g-wallis/font-tutorials/"
 # Adds anchor links to h2-h6

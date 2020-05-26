@@ -56,6 +56,7 @@ a) In this example I’ve created 26 glyphs and named them lowercase with the su
 	     a.slant,  b.slant,  c.slant,  etc...  
 
 	<img src="/assets/images/chain/3-how-to-create-chained-contextual-lookups-fontforge.png" alt="create-glyphs-for-chained-contextual-lookup" width="70%" height="70%"/>  
+
 ---
 
 ## Single Substitution Lookup Table  
