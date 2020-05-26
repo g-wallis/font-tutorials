@@ -16,8 +16,8 @@ Modifications include:
 Modifications are found within the following files:  
 - overrides.scss  
 - custom.scss  
-- default.html includes a line of code to incoporate the toc  
-- toc.html this is an additional file, to accomodate allejo's [toc]  
+- default.html includes a line of code to incorporate the toc  
+- toc.html which is an additional file, to incorporate allejo's [toc]  
 
 ## Known Issues  
 
@@ -29,7 +29,7 @@ Feel free to check the issues or open a new one if you have questions or somethi
 
 If you'd like to submit a tutorial or article you've written about fonts, to us, please create a pull request and we'll let you know what to do next.  
 
-Something wrong? Let us know by opening an issue or submitting a pull request with the updated information.
+Something wrong? Let us know by opening an issue or submitting a pull request with the updated information.  
 
 ### Content Guidelines  
 

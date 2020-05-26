@@ -102,7 +102,7 @@ b) These changes need to be made using software that’s designed for fonts, lik
 18. If I want all 16 font styles to be grouped or nested within the same font family in Windows and Adobe software, then each file needs to include identification that associates them to their font family.  
 a) These changes can be made using Fontforge.
 
-The next section of this tutorial will go through the steps, to change the 'Font name' and identification, so that all font styles are visable and grouped into font families.  
+The next section of this tutorial will go through the steps, to change the 'Font name' and identification, so that all font styles are visible and grouped into font families.  
 
 ---
 
@@ -182,7 +182,7 @@ b) select ‘Same as PostScript Names’ from the drop down.
 27. The next line we’ll change is the ‘UniquieID’ line.  
 a) Select and right mouse click on ‘UniqueID’, then  
 b) select ‘Delete’ from the drop down box.  
-    <img src="/assets/images/name/16-how-to-name-font-naming-convention-fontforge.png" alt="delet-uniqueid-line-in-TTF" width="90%" height="90%"/>  
+    <img src="/assets/images/name/16-how-to-name-font-naming-convention-fontforge.png" alt="delete-uniqueid-line-in-TTF" width="90%" height="90%"/>  
 
 
     i. If you forget to delete the ‘UniqueID’ line, a helpful message pops up when you click ‘OK’.  

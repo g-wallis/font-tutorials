@@ -379,7 +379,7 @@ c) De-select ‘calt’ by holding down ‘Ctrl’ on your keyboard and left mou
 	<img src="/assets/images/chain/45-how-to-complete-chained-contextual-lookup-table-calt.png" alt="alternate-formula-example-for-chained-contextual-lookup-in-fontforge" width="70%" height="70%"/>  
 
 59. This means:
-    - If the preceeding glyph is from ‘back’, and  
+    - If the preceding glyph is from ‘back’, and  
     - a glyph appears from ‘letters’ and is immediately followed by a number, then replace the glyph from letters with ‘ital’,  
     - only where the next glyph is from ‘ahead’.  
 

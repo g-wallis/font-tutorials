@@ -202,7 +202,7 @@ b) click ‘Metrics>New Metrics Window',
 c) type ‘ttle’ in the text box, and  
 d) deselect ‘liga’ by holding down ‘Ctrl’ on your keyboard and ‘Left Mouse Click’ with your mouse pointer on the word ‘liga’  
 
-    <img src="/assets/images/ligature2/24-how-to-test-ligatures-fontforge.png" alt="reviwing-liga-ligature-by-typing-letters-into-metrics-view" width="70%" height="70%"/>  
+    <img src="/assets/images/ligature2/24-how-to-test-ligatures-fontforge.png" alt="reviewing-liga-ligature-by-typing-letters-into-metrics-view" width="70%" height="70%"/>  
 
 35. Congratulations on making it to the end and creating your lookup table.
 
