@@ -44,7 +44,6 @@ gems:
     - just-the-docs
     - jekyll-seo-tag
     - jekyll-sitemap
-    - rake
 
 # Auxillary link in TOC and top right Github link
 aux_links:

@@ -21,7 +21,7 @@ Modifications are found within the following files:
 
 ## Known Issues  
 
-The site's search function does't work comprehensively and we are waiting for just-the-docs to fix it.  
+The search function did not work when we used the search.rake file from just-the-docs. To overcome this, we manually created the search-data.json file, as outlined on just-the-docs' [generate search index] section.  
 
 ## Contribute  
 
@@ -54,3 +54,4 @@ Font Tutorials are distributed under an open source [MIT] license.
 [toc]: https://github.com/allejo/jekyll-toc  
 [just-the-docs]: https://github.com/pmarsceill/just-the-docs  
 [MIT]: /license  
+[generate search index]: https://pmarsceill.github.io/just-the-docs/docs/search/#generate-search-index  
