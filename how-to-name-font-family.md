@@ -319,8 +319,8 @@ e) go back and make sure you've followed the instructions, step by step.
 
 I hope this tutorial has been of assistance and you can put some of the information to good use when you want to change the font attributes using Fontforge.  
 
-[Microsoft]:  https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids  
-[Adobe]:  https://www.adobe.com/devnet/font.html  
+[Microsoft]: https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids  
+[Adobe]: https://www.adobe.com/devnet/font.html  
 [Apple]: https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6OS2.html  
-[6 versions]:  (https://docs.microsoft.com/en-us/typography/opentype/spec/os2)  
-[Abg Font Thumbnail]:  /how-to-fix-font-abg-thumbnails/#generating-your-font
+[6 versions]: https://docs.microsoft.com/en-us/typography/opentype/spec/os2  
+[Abg Font Thumbnail]: /how-to-fix-font-abg-thumbnails/#generating-your-font

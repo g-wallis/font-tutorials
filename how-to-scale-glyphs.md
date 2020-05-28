@@ -137,4 +137,4 @@ a) compare your scaled font with the original by double clicking on the font thu
 
 I hope this tutorial has been of assistance and you can put some of the information to good use when scaling glyphs.  
 
-[Abg Font Thumbnail]:  /abg-thumbnails/#generating-your-font  
+[Abg Font Thumbnail]: /how-to-fix-font-abg-thumbnails/#generating-your-font  

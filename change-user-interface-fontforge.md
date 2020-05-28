@@ -267,7 +267,7 @@ a) To do this, right click on your personal preferences file and select either �
 
 I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.  
 
-[Fontforge’s]: (https://github.com/fontforge/fontforge/blob/61ea6a817de0c0576c0b04b4faec956a7440666d/doc/sphinx/ui/misc/xres.rst)  
-[documentation]: (https://fontforge.org/docs/ui/misc/xres.html).  
-[Goodlight]: (https://www.dafont.com/goodlight.font?l%5b%5d=10)  
-[Linux Libertine]: (https://www.dafont.com/linux-libertine.font?l%5b%5d=10)  
+[Fontforge’s]: https://github.com/fontforge/fontforge/blob/61ea6a817de0c0576c0b04b4faec956a7440666d/doc/sphinx/ui/misc/xres.rst  
+[documentation]: https://fontforge.org/docs/ui/misc/xres.html.  
+[Goodlight]: https://www.dafont.com/goodlight.font?l%5b%5d=10  
+[Linux Libertine]: https://www.dafont.com/linux-libertine.font?l%5b%5d=10  
