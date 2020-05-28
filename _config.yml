@@ -1,7 +1,8 @@
 # Title of website
-title: Font Tutorials
-
-description: The home of easy to follow tutorials on font editing software
+title:  >- # this means to ignore newlines until "baseurl:". Doing this will avoid duplicate titles showing and badly affecting SEO
+ Font Tutorials
+description: >- # this means to ignore newlines until "baseurl:"
+ The home of easy to follow tutorials on font editing software
 baseurl: ""
 
 # Adds SEO identification iaw Schema.org
@@ -57,11 +58,7 @@ footer_content: Font Tutorials are distributed under an open source <a href="/li
 
 # Search Engine Verification
 webmaster_verifications:
-  google: 1234
-  bing: 1234
-  alexa: 1234
-  yandex: 1234
-  baidu: 1234
+  yandex: 0aae3dc7090ff70b
 
 # Google Analytics Tracking
 ga_tracking: UA-167494395-1
