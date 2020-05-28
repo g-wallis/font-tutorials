@@ -103,16 +103,21 @@ blockquote {
   border-left: 5px solid $red-300;
 }
 
-// Buttons
+// Buttons - changes purple outline
 
 .btn {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12), 0 5px 10px rgba(0, 0, 0, 0.08);  // this is the bottom & right shaddow
-  
+
+  &:focus {
+    box-shadow: 0 0 0 2px $link-color;   // this is after-click-select outline
+  }
+ 
   &:focus:hover,
   &.selected:focus {
     box-shadow: 0 0 0 1px $link-color; // this is the outline border color & thickness when button is clicked
   }
 }
+
 
 // Adds TOC to righthand side in xl layout
 
@@ -162,4 +167,8 @@ blockquote {
 .toc-item {
   padding-top: .24rem;
   padding-bottom: .24rem;
+}
+
+:root {
+--tab-loading-fill: #000000 !important;
 }

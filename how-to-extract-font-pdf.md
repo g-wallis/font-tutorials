@@ -1,17 +1,17 @@
 ---
 layout: page  
-title: Fonts From PDFs  
-description: This tutorial will show you how to extract fonts from a PDF file using Fontforge.  
+headline: Font From PDFs  
+title: How to Extract Font From a PDF File Using Fontforge
+description: This tutorial will show you how to extract font from a PDF file using Fontforge.  
 image: /assets/images/pdf/0-how-to-extract-fonts-pdf-fontforge.png
 nav_order: 9  
-permalink: /extract-pdf/  
 ---
 
 <center><img src="/assets/images/pdf/1-how-to-extract-fonts-pdf-fontforge.png" alt="how-to-extract-fonts-from-pdf-in-fontforge" width="35%" height="35%"/></center>  
 
-# HOW TO EXTRACT FONTS FROM A PDF FILE USING FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to extract fonts from a PDF file using Fontforge.**  
+**{{ page.description }}**  
 
 ## How this Tutorial Is Organized  
 {: .no_toc }
@@ -39,7 +39,7 @@ a) For example, if the PDF document you are trying to extract from does not cont
 6. Where all the glyphs are present in the PDF document, Fontforge may not extract them all.  
 a) This could be down to Fontforge’s code capabilities, the PDF format, it’s subsetting and optimization, locked or embedded PDF settings, or perhaps a little of both.  
 
-7. Most PDFs which are online, only embed subets of the font and not the full font.  
+7. Most PDFs which are online, only embed subsets of the font and not the full font.  
 a) Extracting a subset of a font is only useful in a very limited scope, if at all.  
 
 8. When processing your extraction, Fontforge may display error dialogue boxes.  

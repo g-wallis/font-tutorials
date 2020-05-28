@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Ligature Tables 2
+headline: Ligature Tables 2  
+title: How to Create Ligature Tables in Fontforge
 description: This tutorial will show you how to create ligature tables in Fontforge, via ‘Glyph Info’.
 image: /assets/images/ligature2/0-how-to-create-ligature-tables-fontforge.png  
 nav_order: 6
-permalink: /create-ligatures2/  
 ---
 
 <center><img src="/assets/images/ligature2/1-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="35%" height="35%"/></center>  
 
-# HOW TO CREATE LIGATURE TABLES USING FONTFORGE VIA GLYPH INFO  
+# {{ page.title }}  
 
-**This tutorial will show you how to create ligature tables in Fontforge, via ‘Glyph Info’.**  
+**{{ page.description }}**  
 
 <center><img src="/assets/images/ligature2/2-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="25%" height="25%"/></center>  
 
@@ -222,4 +222,4 @@ f)  'Default Using Suffix' will never work if you've used Fontforge's 'Mass Glyp
 
 I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.  
 
-[here]: /contextual-chain/#problems-completing-the-subtable
+[here]: /how-to-chained-contextual-ligatures/#problems-completing-the-subtable

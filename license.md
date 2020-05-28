@@ -1,14 +1,11 @@
 ---
 layout: page  
-title: License 
+title: License & Copyright  
 description: MIT License
 nav_exclude: true
-permalink: /license/  
 ---
 
-# License & Copyright  
-
----
+# {{ page.title }}  
 
 ## Summary TLDR  
 

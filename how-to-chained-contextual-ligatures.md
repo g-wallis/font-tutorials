@@ -1,18 +1,17 @@
 ---
 layout: page  
-title: Contextual Chaining Lookups  
+headline: Contextual Chained Lookups  
+title: How to Create Chained Contextual Lookup Tables in Fontforge  
 description: This tutorial will show you how to create contextual chaining lookups in Fontforge.  
-image: /assets/images/chain/0-how-to-create-chained-contextual-lookup-fontforge.png
-canonical_url: /how-to-create-chained-contextual-lookup-fontforge
+image: /assets/images/chain/0-how-to-create-chained-contextual-lookup-fontforge.png  
 nav_order: 8  
-permalink: /contextual-chain/  
 ---
 
 <center><img src="/assets/images/chain/1-how-to-create-chained-contextual-lookup-fontforge.png" alt="how-to-create-contextual-chaining-lookup-table-in-fontforge" width="45%" height="45%"/></center>  
 
-# HOW TO CREATE CONTEXTUAL CHAINING LOOKUPS IN FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to create contextual chaining lookups in Fontforge.**  
+**{{ page.description }}**  
 
 ## How this Tutorial is Organized  
 {: .no_toc}
@@ -441,4 +440,4 @@ f) 'Default Using Suffix' will never work if you've used Fontforge's 'Mass Glyph
 Take a deep breath! You’ve now completed everything you need to run a successful contextual chaining lookup for your font.  
 
 [Fontforge]: https://fontforge.org/docs/ui/dialogs/contextchain.html?highlight=coverage%20table#  
-[steps]: /contextual-chain/#step-sequence  
+[steps]: /how-to-chained-contextual-ligatures/#step-sequence  

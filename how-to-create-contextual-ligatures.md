@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Contextual Lookups
-description: This tutorial will show you how to create contextual lookups in Fontforge.  
+headline: Contextual Ligature Table
+title: How to Create Contextual Ligature Lookup Tables in Fontforge  
+description: This tutorial will show you how to create contextual ligature lookup tables in Fontforge.  
 image: /assets/images/contextual/0-how-to-create-contextual-lookups-fontforge.png
 nav_order: 7
-permalink: /contextual-lookups/
 ---
 
 <center><img src="/assets/images/contextual/1-how-to-create-contextual-lookups-fontforge.png" alt="how-to-create-contextual-lookup-table-in-fontforge" width="30%" height="30%"/></center>  
 
-# HOW TO CREATE CONTEXTUAL LOOKUPS IN FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to create contextual lookups in Fontforge.**  
+**{{ page.description }}**  
 
 ## How this Tutorial Is Organized  
 {: .no_toc}
@@ -117,9 +117,9 @@ a)  typing ‘slant’ in the box next to ‘Default Using Suffix’.
 
     - check the glyph names,  
     - check spelling,   
-    - make sure you’re referring to the right names (g.sc and G.sc are not the same), are you thinking about the uppercase glyph and have named it with a lowercase letter.   
+    - make sure you’re referring to the right names (g.sc and G.sc are not the same), are you thinking about the uppercase glyph and have named it with a lowercase letter.  
     - Try to manually type in the list, and as a last resort save, quit and restart Fontforge and start again.  
-    - **Be aware** if you get a warning pop up asking ‘whether the glyphs you typed were intentional’, you need to save, quit, restart Fontforge and start again for the ‘Default Using Suffix’ button to work.   
+    - **Be aware** if you get a warning pop up asking ‘whether the glyphs you typed were intentional’, you need to save, quit, restart Fontforge and start again for the ‘Default Using Suffix’ button to work.  
     - 'Default Using Suffix' will never work if you've used Fontforge's 'Mass Glyph Rename' function. I've outlined the reasons why and what to do, to be able to use 'Default Using Suffix', [here].  
     {: .blockquote}
 
@@ -368,4 +368,4 @@ f) 'Default Using Suffix' will never work if you've used Fontforge's 'Mass Glyph
 
 If all went well, you now have a working contextual lookup and you can build a fully functional font using Fontforge.  
 
-[here]:  /contextual-chain/#problems-completing-the-subtable
+[here]: /how-to-chained-contextual-ligatures/#problems-completing-the-subtable

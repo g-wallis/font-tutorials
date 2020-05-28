@@ -1,17 +1,17 @@
 ---
 layout: page  
-title: Scale Glyphs  
+headline: Scale Glyphs  
+title: How to Scale Glyphs in Fontforge  
 description: This tutorial will show you how to scale glyphs in Fontforge.  
 image: /assets/images/scale/0-how-to-scale-glyphs-fontforge.png
 nav_order: 2  
-permalink: /scale-glyphs/  
 ---
 
 <center><img src="/assets/images/scale/1-how-to-scale-glyphs-fontforge.png" alt="how-to-scale-glyphs-in-fontforge" width="35%" height="35%"/></center>  
 
-# HOW TO SCALE GLYPHS USING FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to scale glyphs in Fontforge.**  
+**{{ page.description }}**  
 
 ## How this Tutorial is Organized  
 {: .no_toc }

@@ -1,17 +1,17 @@
 ---
 layout: page  
-title: Ligature Tables 1  
-description: This tutorial will show you how to create ligature substitution tables in Fontforge, via ‘Font Info’.  
+headline: Ligature Tables 1  
+title: How to Create Ligature Substitution Lookup Tables in Fontforge  
+description: This tutorial will show you how to create ligature substitution lookup tables in Fontforge, via ‘Font Info’.  
 image: /assets/images/ligature1/0-how-to-create-ligature-tables-fontforge.png
 nav_order: 5  
-permalink: /create-ligatures1/  
 ---
 
 <center><img src="/assets/images/ligature1/1-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="35%" height="35%"/></center>  
 
-# HOW TO CREATE LIGATURE TABLES USING FONTFORGE VIA FONT INFO  
+# {{ page.title }}  
 
-**This tutorial will show you how to create ligature substitution tables in Fontforge, via ‘Font Info’.**  
+**{{ page.description }}**  
 
 <center><img src="/assets/images/ligature1/2-how-to-create-ligature-tables-fontforge.png" alt="how-to-create-ligature-tables-in-fontforge" width="25%" height="25%"/></center>  
 
@@ -22,7 +22,7 @@ permalink: /create-ligatures1/
 2. Followed by adding a new encoding slot so that we can create and build the ‘fi’ ligature.  
 3. Then we’ll add a single substitution lookup table, using ‘Font Info’.  
 4. Next we’ll type ‘fi’ in 'Metrics View’ to check whether our ligature table works.  
-5.  To finish off, I'll provide tips in case your ligature lookup table may not be working.  
+5. To finish off, I'll provide tips in case your ligature lookup table may not be working.  
 
 >  i. You can download Fontforge for Windows, Mac, or Linux from [here](https://fontforge.org/en-US/downloads/).  
 >  ii. The font used in this tutorial is called [Playball](https://fonts.google.com/specimen/Playball). It’s a free font for personal and commercial use with an open source license.  
@@ -229,4 +229,4 @@ f)  'Default Using Suffix' will never work if you've used Fontforge's 'Mass Glyp
 
 I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.  
 
-[here]:  /contextual-chain/#problems-completing-the-subtable  
+[here]:  /how-to-chained-contextual-ligatures/#problems-completing-the-subtable  

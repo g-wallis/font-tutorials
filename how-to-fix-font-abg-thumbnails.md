@@ -1,17 +1,17 @@
 ---
 layout: page  
-title: Abg Font Thumbnails  
+headline: Abg Font Thumbnails  
+title: How to Change the Abg Text on Font Thumbnails Using Fontforge  
 description: This tutorial will show you how to change the Abg text on font thumbnails using Fontforge.  
-image: /assets/images/thumbnail/0-how-to-change-abg-font-thumbnail.png
+image: /assets/images/thumbnail/0-how-to-change-abg-font-thumbnail.png  
 nav_order: 1  
-permalink: /abg-thumbnails/  
 ---
 
 <center><img src="/assets/images/thumbnail/1-how-to-change-abg-font-thumbnail.png" alt="fix-abg-letters-thumbnails-before-and-after" width="35%" height="35%"/></center>  
 
-# HOW TO CHANGE THE Abg TEXT ON FONT THUMBNAILS USING FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to change the Abg text on font thumbnails using Fontforge.**  
+**{{ page.description }}**  
 
   <img src="/assets/images/thumbnail/2-how-to-fix-abg-font-thumbnails.png" alt="how-to-fix-abg-font-thumbnails-before-and-after" width="30%" height="30%"/>  
 
@@ -168,7 +168,7 @@ a) click ‘Generate’ to generate and save your updated font, to your nominate
     <img src="/assets/images/thumbnail/19-fix-abg-font-thumbnail.png" alt="generating-your-font-dialogue-box" width="45%" height="45%"/>  
 
 If you're on this page from another tutorial you can now head back there.  
-<span class="fs-3">[Back to Font Names](/font-names/#generating-your-font){: .btn .mr-2}  [Back to Scale Glyphs](/scale-glyphs/#review--test){: .btn }</span>
+<span class="fs-3">[Back to Font Names](/how-to-name-font-family/#generating-your-font){: .btn .mr-2}  [Back to Scale Glyphs](/how-to-scale-glyphs/#review--test){: .btn }</span>
 {: .blockquote}
 
 **Congratulations on making it to the end.**  
@@ -178,4 +178,4 @@ Tada! You have successfully updated your first Abg font thumbnail. If you'd like
 I hope this tutorial has been of assistance and you can put some of the information to good use when using Fontforge.  
 <img src="/assets/images/thumbnail/20-change-abg-font-thumbnail.png" alt="finished-picture-of-abg-font-thumbnail" width="15%" height="15%"/>  
 
-[font names]: /font-names  
+[font names]: /how-to-name-font-family/  

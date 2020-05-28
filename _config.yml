@@ -1,8 +1,6 @@
 # Title of website
-title:  >- # this means to ignore newlines until "baseurl:". Doing this will avoid duplicate titles showing and badly affecting SEO
- Font Tutorials
-description: >- # this means to ignore newlines until "baseurl:"
- The home of easy to follow tutorials on font editing software
+title: Font Tutorials
+description: The home of easy to follow tutorials on font editing software
 baseurl: ""
 
 # Adds SEO identification iaw Schema.org

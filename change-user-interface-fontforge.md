@@ -1,17 +1,17 @@
 ---
 layout: page  
-title: User Interface Settings  
+headline: User Interface Settings  
+title: How to Change the User Interface and Display Settings in Fontforge
 description: This tutorial will show you how to change the appearance of some of the user interface settings in Fontforge.  
 image: /assets/images/interface/0-how-to-change-user-interface-fontforge.png
 nav_order: 3  
-permalink: /user-interface/  
 ---
 
 <center><img src="/assets/images/interface/1-change-display-settings-fontforge.png" alt="how-to-change-display-settings-using-fontforge" width="30%" height="30%"/></center>  
 
-# HOW TO CHANGE THE USER INTERFACE SETTINGS IN FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to change the appearance of some of the user interface settings in Fontforge.**  
+**{{ page.description }}**  
 
 ## How this Tutorial is Organized  
 {: .no_toc}

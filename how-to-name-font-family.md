@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Font Names
-description: This tutorial will show you how to name a font families so that they all group together in your operating system’s font location, as well as in Adobe Illustrator and Adobe Photoshop font previews, using Fontforge.    
+headline: Font Names
+title: How to Name Font Families in Fontforge
+description: This tutorial will show you how to name font families, so that they all group together in your operating system’s font location, as well as in Adobe Illustrator and Adobe Photoshop font previews, using Fontforge.  
 image: /assets/images/name/0-how-to-name-font-families-fontforge.png
 nav_order: 4
-permalink: /font-names/
 ---
 
 <center><img src="/assets/images/name/1-how-to-name-font-families-fontforge.png" alt="how-to-name-font-families-in-fontforge" width="35%" height="35%"/></center>  
 
-# HOW TO NAME A FONT FAMILY IN FONTFORGE  
+# {{ page.title }}  
 
-**This tutorial will show you how to name font families so they group together in your operating system’s font location, as well as in Adobe Illustrator and Adobe Photoshop font previews, using Fontforge.**  
+**{{ page.description }}**  
 
 ## How this Tutorial is Organized  
 {: .no_toc}
@@ -323,4 +323,4 @@ I hope this tutorial has been of assistance and you can put some of the informat
 [Adobe]:  https://www.adobe.com/devnet/font.html  
 [Apple]: https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6OS2.html  
 [6 versions]:  (https://docs.microsoft.com/en-us/typography/opentype/spec/os2)  
-[Abg Font Thumbnail]:  /abg-thumbnails/#generating-your-font
+[Abg Font Thumbnail]:  /how-to-fix-font-abg-thumbnails/#generating-your-font
