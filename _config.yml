@@ -42,7 +42,10 @@ markdown: kramdown
 gems:
     - just-the-docs
     - jekyll-seo-tag
-
+    - jekyll-sitemap
+# Plugins
+plugins:
+    - jekyll-remote-theme
 # Auxillary link in TOC and top right Github link
 aux_links:
     "Font Tutorials on GitHub":
