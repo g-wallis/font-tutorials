@@ -4,7 +4,6 @@ gem 'jekyll'
 
 group :jekyll_plugins do
 	gem 'just-the-docs'
-	gem 'jekyll-sitemap'
 	gem 'jekyll-seo-tag'
 end
 

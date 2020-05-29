@@ -8,7 +8,7 @@ type: HowTo
 tagline: Easy to follow, step by step instructions on how to use font editing software
 
 # Jekyll theme
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 
 # Add a site logo for each page, also helps SEO
 logo: /assets/images/logo.png
@@ -42,7 +42,6 @@ markdown: kramdown
 gems:
     - just-the-docs
     - jekyll-seo-tag
-    - jekyll-sitemap
 
 # Auxillary link in TOC and top right Github link
 aux_links:
