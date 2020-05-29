@@ -42,7 +42,6 @@ markdown: kramdown
 gems:
     - just-the-docs
     - jekyll-seo-tag
-    - jekyll-sitemap
 # Plugins
 plugins:
     - jekyll-remote-theme
